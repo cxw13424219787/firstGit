@@ -1,0 +1,88 @@
+			/*猜你喜欢380*/
+			#guessyoulike{
+				height: 322px;
+			    margin-bottom: 30px;
+			    overflow: hidden;
+			}
+			/*猜你喜欢主题部分*/
+			#guessyoulike .mt h2{
+				padding-right: 228px;
+	    		background: url(../img/京东全部图片/头部/header/今日推荐刷新问卷调查.png) no-repeat 85px -91px;
+	    		color: #333;
+			    font-size: 20px;
+			    line-height: 33px;
+			    display: inline-block;
+			}
+			#guessyoulike .mt a{
+				float: right;
+				line-height: 33px;
+			}
+			#guessyoulike .mt{
+				height: 36px;
+			}
+			/*猜你喜欢内容部分*/
+			#guessyoulike .mc{
+				 height: 272px;
+			    border: 1px solid #ededed;
+			    border-top: 0;
+			    overflow: visible;
+			}
+			#guessyoulike .mc .spacer{
+				position: relative;
+			    height: 1px;
+			    line-height: 0;
+			    font-size: 0;
+			    background-color: #d1d1d1;
+			}
+			#guessyoulike .mc .spacer i{
+			    width: 365px;
+			    height: 5px;
+			    overflow: hidden;
+			    position: absolute;
+			    right: -1px;
+			    top: -2px;
+			    background: #b72323 url(../img/京东全部图片/头部/header/今日推荐刷新问卷调查.png) no-repeat 0 -124px;				
+			}
+			/*图片部分*/
+			#guessyoulike ul{
+				height: 247px;
+			    padding-top: 20px;
+			    overflow: hidden;
+			}
+			#guessyoulike ul li{
+			    float: left;
+			    width: 201px;
+			    overflow: hidden;
+			    padding-bottom: 15px;
+			}
+			/*img土门*/
+			#guessyoulike .p-img{
+				text-align: center;
+				margin-bottom: 10px;
+			}
+			/*图片信息部分,分为name和price*/
+			#guessyoulike .p-info{
+			    padding: 0 36px;
+			    border-left: 1px solid #e6e6e6;
+        	}
+			#guessyoulike .p-info .p-name{
+			    height: 36px;
+			    margin-bottom: 6px;			
+			}
+			#guessyoulike .p-info .p-price a{
+				color: #b51d1a;
+    			font-size: 18px;
+			}
+			#guessyoulike .p-info .p-name{
+				height: 35px;
+				overflow: hidden;
+			}
+			#guessyoulike .car_btn{
+				width: 77px;
+				height: 30px;
+				border: 1px solid #DDDDDD;
+				border-radius: 3px;
+				text-align: center;
+				line-height: 30px;
+				margin: 0 auto;
+			}

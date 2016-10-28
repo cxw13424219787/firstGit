@@ -1,0 +1,85 @@
+		#tooBar_right_LoutiNav{
+			position: fixed;
+			top: 50%;
+			right: 0px;
+			width: 35px;
+			margin-top: -61px;
+			height: 500px;		
+		}
+		#tooBar_right_LoutiNav .fore{
+			position: relative;
+			width: 35px;
+			height: 35px;
+			margin-bottom: 1px;
+			cursor: pointer;
+			background-color: #7a6e6e;
+			border-radius: 3px 0 0 3px;
+		}
+		#tooBar_right_LoutiNav i{
+			display: inline-block;
+			background-image: url(../img/京东全部图片/购物车/body右购物车.png);
+			background-repeat: no-repeat;
+		}
+		.tooBar_right_LoutiNav_fore1 .tab-tip{
+			position: absolute;
+			top: 8px;
+			right: 10px;
+			width: 6px;
+			height: 6px;
+			background-position: -150px -150px;
+			z-index: 999;		
+		}
+		#tooBar_right_LoutiNav .tab-ico{
+			width: 34px;
+			height: 35px;
+			margin-left: 1px;
+			position: relative;
+			z-index: 2;
+			background-color: #7a6e6e
+		}
+		/*每一个div的图标tab-ico都不一样*/
+		.tooBar_right_LoutiNav_fore1 .tab-ico{
+			background-position: -88px -175px;
+		}
+		.tooBar_right_LoutiNav_fore2 .tab-ico{
+			background-position: -50px -0px;
+		}
+		.tooBar_right_LoutiNav_fore3 .tab-ico{
+			background-position: -50px -50px;
+		}
+		.tooBar_right_LoutiNav_fore4 .tab-ico{
+			background-position: -50px -100px;
+		}
+		.tooBar_right_LoutiNav_fore5 .tab-ico{
+			background-position: -50px -250px;
+		}
+		.tooBar_right_LoutiNav_fore6 .tab-ico{
+			background-position: -50px -300px;
+		}
+		/*改变fore里面的tab-text*/
+		#tooBar_right_LoutiNav .tab-text{
+			width: 62px;
+			height: 35px;
+			line-height: 35px;
+			color: #fff;
+			text-align: center;
+			position: absolute;
+			z-index: 2;
+			left: 35px;
+			top: 0;
+			background-color: #7a6e6e;
+			border-radius: 3px 0 0 3px;	
+		}
+		/*移动进图标图标变红*/
+		#tooBar_right_LoutiNav .fore:hover .tab-ico {
+		    background-color: #c81623;
+		}
+		/*移动进图标文字从右边出现*/
+		#tooBar_right_LoutiNav .fore:hover .tab-text {
+		    background-color: #c81623;
+		    left: -60px;
+		    transition: left .3s ease-in-out .1s;
+		}
+		
+
+			

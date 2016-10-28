@@ -1,0 +1,109 @@
+			/* 楼层1
+			 * 楼层1
+			 * 楼层1楼
+			 * 层1楼层1楼层1楼层1楼层1楼层1*/
+			.floor_3{
+				overflow: hidden;
+			}
+			
+			#floor_3{
+				overflow: hidden;
+				background: white;
+			}
+			/*将所有图标遍历一遍
+			 * 让每个主题都有自己的logo*/
+			#floor_3 .themes .fore1 .icon{
+				background: url(../img/京东全部图片/1F服饰/小图标/1F男装.png) no-repeat 0px 0px;
+				width: 32px;
+			}
+			
+			#floor_3 .f3_content {
+				overflow: hidden;
+				height: 475px;
+			}
+			#floor_3 .f3_content .themes  {
+				padding-left: 25px;
+			    margin-top: -221px;
+				height: 46px;
+			}
+			#floor_3 .themes li {
+				width: 98px;
+			}
+			#floor_3 .main-inner li.side_lunbo {
+				width: 439px;
+				visibility: hidden;
+			}
+			/*文字部分的内容*/
+			#floor_3 .words {
+				height: 128px;
+				border-bottom: 1px solid #ededed;
+			}
+			#floor_3 .words li  {
+				height: 96px;
+				padding-top: 7px;
+			}
+			/*最下面的图片*/
+			#floor_3 .side-extra {
+			    width: 328px;
+			    height: 158px;
+			    border: 1px solid #ededed;
+			    border-left: 1px solid #f7f5ee;
+			    border-top: 0;
+			    overflow: hidden;
+			}
+			/*main-body的部分*/
+			#floor_3 .main{
+				height: 663px;
+			}
+			/*默认的是219px*/
+			/*main-extra的部分*/
+			/*除去大牌外其余部分p-list*/
+			#floor_3 .p-list{
+				width: 890px;
+			}
+			#floor_3 .p-list li {
+			    width: 185px;
+			}
+			#floor_3 .img-list {
+			    width: 890px;
+			}
+			/*重点,轮播图开始*/
+			#floor_3 .slide .slide-body{
+				height:439px;
+				width: 236px;
+				position: absolute;
+			    top: 0;
+			    left: 0;
+			}
+			#floor_3 .slide ul.slide-main{
+			    width: 2200px;
+			    position: absolute;
+			    /*overflow: hidden;*/
+			}
+			#floor_3 .slide ul.slide-main li{
+				float: left;
+				width:439px ;
+			}
+			#floor_3 .slide .slide-body .LunBoNum{
+				top: 200px;
+			}
+			/*辅助部分,加到themes里面去的*/
+			.floor .assists {
+			    position: relative;
+			    height: 48px;
+			    padding: 21px 0 0;
+			    font-size: 14px;
+			    line-height: 24px;
+			    overflow: hidden;
+			    background: rgba(255,255,255,.7);
+			}
+			.floor .assists li {
+			    float: left;
+			    width: 180px;
+			    height: 24px;
+			    padding-left: 25px;
+			    overflow: hidden;
+			}
+			#floor_3 .assists li {
+				width: 135px;
+			}

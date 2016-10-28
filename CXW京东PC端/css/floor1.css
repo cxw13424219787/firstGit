@@ -1,0 +1,91 @@
+			/* 楼层1
+			 * 楼层1
+			 * 楼层1楼
+			 * 层1楼层1楼层1楼层1楼层1楼层1*/
+			.floor_1{
+				overflow: hidden;
+				min-height: 578px;
+			}
+			
+			#floor_1{
+				overflow: hidden;
+				background: white;
+			}
+			/*将所有图标遍历一遍
+			 * 让每个主题都有自己的logo*/
+			#floor_1 .themes .fore1 .icon{
+				background: url(../img/京东全部图片/1F服饰/小图标/1F男装.png) no-repeat 0px 0px;
+				width: 32px;
+			}
+			
+			#floor_1 .f1_content .themes  {
+				padding-left: 25px;
+			    margin-top: -221px;
+			}
+			#floor_1 .themes li {
+				width: 100px;
+			}
+			/*文字部分的内容*/
+			#floor_1 .words {
+				height: 128px;
+				border-bottom: 1px solid #ededed;
+			}
+			#floor_1 .words li  {
+				height: 96px;
+				padding-top: 16px;
+			}
+			/*最下面的图片*/
+			#floor_1 .side-extra {
+			    width: 328px;
+			    height: 158px;
+			    border: 1px solid #ededed;
+			    border-left: 1px solid #f7f5ee;
+			    border-top: 0;
+			    overflow: hidden;
+			}
+			/*main-body的部分*/
+			#floor_1 .main{
+				height: 663px;
+			}
+			/*给特殊的几个长度都是420px*/
+			/*默认的是219px*/
+			#floor_1  .main-body li.fore1,#floor_1  .main-body li.side_lunbo,#floor_1  .main-body li.fore5{
+				float: left;
+				width: 439px;
+			}
+			/*main-extra的部分*/
+			#floor_1  .main-extra li.fore1,#floor_1  .main-extra li.fore2,#floor_1  .main-extra li.fore3,#floor_1  .main-extra li.fore4,#floor_1  .main-extra li.fore5,#floor_1  .main-extra li.fore6{
+				
+			}
+			/*除去大牌外其余部分p-list*/
+			#floor_1 .p-list{
+				width: 890px;
+			}
+			#floor_1 .p-list li {
+			    width: 185px;
+			}
+			#floor_1 .img-list {
+			    width: 890px;
+			}
+			/*轮播图开始*/
+			#floor_1 .slide{
+				height: 315px;
+				top: 158px;
+			}
+			#floor_1 .slide .slide-body{
+				height:439px ;
+				width: 315px;
+			}
+			#floor_1 .slide ul.slide-main{
+			    width: 2634px;
+			    position: absolute;
+			    overflow: hidden;
+			}
+			#floor_1 .slide ul.slide-main li{
+				float: left;
+				width:439px ;
+				height: 315px;
+			}
+			#floor_1 .main-inner a{
+				width: 439px;
+			}

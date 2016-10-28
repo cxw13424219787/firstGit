@@ -1,0 +1,113 @@
+		#shopping_center{
+			height: 98px;
+			padding: 80px 0 120px;
+			color: #333;			
+		}
+		#shopping_center .car_content{
+		    height: 98px;
+		    padding-left: 341px;
+		    background: url(../img/京东全部图片/购物车/shopping_car.png) no-repeat  250px 22px;
+		    width: 600px;
+		    margin: 0 auto;
+		}
+		.car_content ul{
+			padding-top: 20px;
+		}
+		/*内容*/
+		.car_content ul li{
+			line-height: 26px;
+		}
+		.car_content ul li:first{
+			font-size: 14px;
+		}
+
+.car_content ul li.login a:first{
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	background-color: #e74649;
+}
+.car_content ul li.login a:nth-child(2){
+	color: #005ea7;
+}
+
+/*展示的商品*/
+			/*猜你喜欢380*/
+			#shopping_info{
+				height: 288px;
+			    margin-bottom: 30px;
+			    /*overflow: hidden;*/
+			}
+			/*猜你喜欢主题部分*/
+			#shopping_info .mt h2{
+				padding-right: 228px;
+	    		background: url(../img/京东全部图片/头部/header/今日推荐刷新问卷调查.png) no-repeat 85px -91px;
+	    		color: #333;
+			    font-size: 20px;
+			    line-height: 33px;
+			    display: inline-block;
+			}
+			#shopping_info .mt a{
+				float: right;
+				line-height: 33px;
+			}
+			#shopping_info .mt{
+				height: 36px;
+			}
+			/*猜你喜欢内容部分*/
+			#shopping_info .mc{
+				 height: 268px;
+			    border: 1px solid #ededed;
+			    border-top: 0;
+			    overflow: visible;
+			}
+			#shopping_info .mc .spacer{
+				position: relative;
+			    height: 1px;
+			    line-height: 0;
+			    font-size: 0;
+			    background-color: #d1d1d1;
+			}
+			#shopping_info .mc .spacer i{
+			    width: 365px;
+			    height: 5px;
+			    overflow: hidden;
+			    position: absolute;
+			    right: -1px;
+			    top: -2px;
+			    background: #b72323 url(../img/京东全部图片/头部/header/今日推荐刷新问卷调查.png) no-repeat 0 -124px;				
+			}
+			/*图片部分*/
+			#shopping_info ul{
+			    padding-top: 20px;
+			}
+			#shopping_info ul li{
+			    float: left;
+			    width: 201px;
+			    overflow: hidden;
+			    padding-bottom: 15px;
+			}
+			/*img土门*/
+			#shopping_info .p-img{
+				text-align: center;
+				margin-bottom: 10px;
+			}
+			/*图片信息部分,分为name和price*/
+			#shopping_info .p-info{
+			    padding: 0 36px;
+			    border-left: 1px solid #e6e6e6;
+        	}
+			#shopping_info .p-info .p-name{
+			    height: 36px;
+			    margin-bottom: 6px;			
+			}
+			#shopping_info .p-info .p-price a{
+				color: #b51d1a;
+    			font-size: 18px;
+			}
+			#shopping_info .p-info .p-name{
+				height: 35px;
+				overflow: hidden;
+			}
+
+

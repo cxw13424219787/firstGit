@@ -1,0 +1,22 @@
+.floor_banner_more{
+	background: #f7f7f7;
+	padding: 13px 11px;
+	margin-top: 10px;
+	margin: 0 auto;
+	width: 1212px;
+	margin-bottom: 30px;
+}
+.floor_banner_more ul{
+	height: 40px;
+	overflow: hidden;
+}
+.floor_banner_more ul li{
+	float: left;
+	width: 120px;
+	height: 40px;
+	border-left: 1px dotted #ccc;
+	text-align: center;
+}
+.floor_banner_more ul li.fore1{
+	border-left: none;
+}

@@ -1,0 +1,117 @@
+			/* 楼层1
+			 * 楼层1
+			 * 楼层1楼
+			 * 层1楼层1楼层1楼层1楼层1楼层1*/
+			#floor_2 .side{
+				width: 211px;
+			}
+
+			#floor_2{
+				overflow: hidden;
+				background: white;
+			}
+			/*将所有图标遍历一遍
+			 * 让每个主题都有自己的logo*/
+			#floor_2 .themes .fore1 .icon{
+				background: url(../img/京东全部图片/1F服饰/小图标/1F男装.png) no-repeat 0px 0px;
+				width: 38px;
+				display: inline-block;
+				margin-right: 5px;
+				height: 26px;
+			}
+			
+			#floor_2 .f1_content .themes  {
+				padding-left: 25px;
+			    margin-top: -221px;
+			}
+			#floor_2 .themes li {
+				width: 100px;
+			}
+			/*文字部分的内容*/
+			#floor_2 .words {
+				height: 142px;
+				border-bottom: 1px solid #ededed;
+			}
+			#floor_2 .words li  {
+				height: 50px;
+				padding-top: 16px;
+			}
+			#floor_2 .words li.fore2 {
+				width: 168px;
+			}
+			/*main-body的部分*/
+			
+			/*给特殊的几个长度都是420px*/
+			/*默认的是219px*/
+			/*轮播图*/
+			#floor_2  .main-body{
+				width: 777px;
+			}
+			#floor_2  .main {
+			    width: 997px;
+			    height: 475px;
+			    overflow: hidden;
+    		}
+			#floor_2  .main-body li.side_lunbo{
+				float: left;
+				width: 339px;
+				height: 500px;
+				overflow: hidden;
+				border-right: 1px solid #ddd;
+				
+			}
+			/*main-extra的部分*/
+			/*除去大牌外其余部分p-list*/
+			#floor_2 .p-list{
+				width: 890px;
+			}
+			#floor_2 .p-list li {
+			    width: 185px;
+			}
+			#floor_2 .img-list {
+			    width: 890px;
+			}
+			/*轮播图开始*/
+			#floor_2 .slide{
+				height: 475px;
+				width: 339px;
+			}
+			#floor_2 .slide .slide-body{
+				height:475px ;
+				width: 339px;
+			}
+			#floor_2 .slide ul.slide-main{
+			    width: 2634px;
+			    position: absolute;
+			    overflow: hidden;
+			}
+			#floor_2 .slide ul.slide-main li{
+				float: left;
+				width:339px ;
+				height: 475px;
+			}
+			#floor_2 .main-inner li{
+				width: 217px;
+			}
+			#floor_2 .main-inner a{
+				width: 339px;
+			}
+			/*轮播图内容改变*/
+			#floor_2 .slide .slide-body .LunBoNum {
+			    left: 168px;
+			    top: 437px;
+			}
+			/*出去热门之外其他的样式*/
+			#floor_2 .p-list{
+				width: 1010px;
+			}
+			#floor_2 .p-list li {
+			    width: 165px;
+			}
+			
+			#floor_2 .p-name a {
+			    height: 31px;
+			    overflow: hidden;
+			    display: inline-block;
+			}
+			

@@ -1,0 +1,519 @@
+			/*main_nav主导航的内容*/
+			.main_nav {
+				position: relative;
+				height: 44px;
+				background: white;
+			}
+			.main_nav .nav_dt{
+				float: left;
+				display: inline-block;
+			}
+			.main_nav .nav_dt a{
+				float: left;
+				display: inline-block;
+				width: 190px;
+				height: 44px;
+				padding: 0 10px;
+				background: #B1191A;
+				font: 400 15px/44px "microsoft yahei";
+				color: #fff;
+				line-height: 44px;
+			}
+			.main_nav .shop_group ul li{
+				float: left;
+				height: 44px;
+			}
+			.main_nav .shop_group ul li a{
+				float: left;
+				padding: 0px 20px;
+				background: white;
+				width: auto;
+				font: 400 15px/44px "microsoft yahei";
+			}
+			.main_nav{
+				border-bottom: 2px solid #B1191A;
+			}
+			/*包住中间的一整块部分*/
+			.bigbox_center{
+				overflow: hidden;
+			}
+			/* dd_content内容 */
+			.all_content{
+				width: 1210px;
+			}
+			.dd_content{
+				height: 466px;
+				width: 190px;
+				float: left;
+			}
+			.dd_content .dd_inner {
+				position: relative;
+			}
+			.dd_content .dd_inner .item:hover {
+				background: white;
+				cursor: pointer;
+			}
+			.dd_content .dd_inner .item:hover h3 a{
+				color: #c81623;
+			}
+			.dd_content .dd_inner .item {
+				padding: 0 10px;
+				width: 189px;
+				background: #c81623;
+				border-left: 1px solid #b61d1d;
+				border-right: 1px solid white;
+				overflow: hidden;
+
+			}
+			.dd_content .dd_inner .item h3 {
+				float: left;
+			}
+			.dd_content .dd_inner .item h3 a{
+				height: 31px;
+				color: #fff;
+				line-height: 31px;
+				font-size: 14px;
+				font-weight: 400;
+			}
+			.dd_content .dd_inner .item > i{
+				position: relative;
+				float: right;
+				z-index: 1;
+				top: 9px;
+				right: 14px;
+				width: 4px;
+				height: 14px;
+				color: #fff;
+				font: 400 9px/14px consolas;
+			}
+			/*<!--在首页main左边li的部分-->*/
+			/*<!--划过左边li的部分的时候-->
+			 *出现的右边部分 
+			 * */
+			/*右边部分的上方*/
+			.dd_content .fore_sub{
+				width: 790px;
+				padding-left: 20px;
+				padding-top:20px;
+				background: white;
+				position: absolute;
+				left: 210px;
+				top: 0;
+				/*display: none;*/
+				z-index: 99;
+				/*overflow: hidden;*/
+			}
+			.dd_content .fore_sub_top{
+				height: 24px;
+			}
+			.dd_content .fore_sub_top .channels a{
+				float: left;
+				display: inline-block;
+				padding: 0 0 0 8px;
+				margin-right: 10px;
+				line-height: 24px;
+				background: #7C7171;
+				color: #fff;
+				white-space: nowrap;
+			}
+			.dd_content .fore_sub_top .channels a i{
+				display: inline-block;
+				margin-left: 8px;
+				width: 23px;
+				height: 24px;
+				font: 400 9px/24px consolas;
+				background: #5c5251;
+				text-align: center;
+				cursor: pointer;
+			}
+			/*右边部分的下方*/
+			.dd_content .fore_sub_bottom{
+				width: 790px;
+				padding-left: 20px;
+				padding-top:6px;
+				min-height: 500px;
+				background: white;
+				position: absolute;
+				top: 44px;
+				left: 0px;
+
+			}
+			.dd_content .fore_sub_bottom dl{
+			    float: left;
+			}
+			
+			.dd_content .fore_sub_bottom dl dt{
+				position: relative;
+			    float: left;
+			    width: 54px;
+			    padding: 8px 30px 0 0;
+			    text-align: right;
+			    font-weight: 700;
+			}
+			.dd_content .fore_sub_bottom dl dt a i{
+				position: absolute;
+				top: 9px;
+				right: 18px;
+				width: 4px;
+				height: 14px;
+				font: 400 9px/14px consolas;
+			}
+			.dd_content .fore_sub_bottom dl dd{
+				width: 620px;
+				float: left;
+				padding: 6px 0;
+				border-top: 1px solid #eee;
+			}
+			.dd_content .fore_sub_bottom dl dd a{
+				float: left;
+				padding: 0 8px;
+				margin: 4px;
+				line-height: 16px;
+				height: 16px;
+				border-left: 1px solid #e0e0e0;
+				white-space: nowrap;
+				
+			}
+			/*<!--大内容的右边部分all_content_right-->*/
+			.all_content_right{
+				float: left;
+				background: white;
+				position: relative;
+				left: 40px;
+				width: 248px;
+				overflow: hidden;
+				top: 12px;
+				border: solid 1px #e4e4e4;
+				border-bottom: 0;
+			}
+			/*上半部分的第一部分*/
+			.all_content_right_top1{
+				height: 32px;
+				line-height: 32px;
+				width: 218px;
+				padding: 0 15px;
+			}
+			.all_content_right_top1 h2{
+				font-size: 16px;
+			}
+			/*上半部分的第二部分*/
+			.all_content_right_top2{
+				height: 120px;
+				padding-top: 5px;
+				padding-left: 15px;
+				
+			}
+			.all_content_right_top2 ul li{
+				line-height: 24px;
+				height: 24px;
+			}
+			.all_content_right_top2 ul li a span{
+				font-weight: 700;
+				margin-right: 5px;			
+				line-height: 24px;
+				height: 24px;
+			}
+			.all_content_right_top2 ul li a{
+				color: #666;			
+			}
+			/*右边的下部分*/
+			.all_content_right_bottom{
+				position: relative;
+				height: 208px;
+				width: 260px;
+			}
+			/*话费充值部分*/
+			ul.right_bottom_channels {
+				position: relative;
+				text-align: center;
+			}
+			ul.right_bottom_channels li{
+				border-bottom: none;
+				background: #fff;
+				line-height: 25px;
+				width: 60px;
+				height: 25px;
+				border-left: 1px solid #ddd;
+				border-right: 1px solid #ddd;
+				text-align: center;
+				float: left;
+			}
+			ul.right_bottom_channels li:hover{
+				border-top: 2px solid #c81623;
+			}
+			ul.right_bottom_channels li a {
+				line-height: 25px;
+			}
+			/*图标部分*/
+			.right_bottom_icon{
+
+			}
+			.right_bottom_icon ul{
+				border: 1px solid #ccc;
+				width: 252px;
+			}
+			.right_bottom_icon ul li{
+				float: left;
+				width: 31px;
+				height: 42px;
+				border-bottom: 1px solid #ccc;
+				border-right: 1px solid #ccc;
+				background-color: white;
+				padding: 15px 15px;
+				position: relative;
+			}
+			.right_bottom_icon ul li a{
+				display: inline-block;
+				width: 30px;
+				height: 27px;
+				position: relative;
+			}
+			.right_bottom_icon ul li span{
+			    width: 40px;
+			    margin-left: -2px;
+    			display: inline-block;
+			}
+			/*给12个li每个一个定位这一行图片*/
+			.right_bottom_icon ul li:nth-child(1) a{
+				background: url(../img/京东全部图片/页面右侧小图标/话费.png) no-repeat -25px 0px;
+			}
+			.right_bottom_icon ul li:nth-child(2) a{
+				background: url(../img/京东全部图片/页面右侧小图标/话费.png) no-repeat -25px -25px;
+			}
+			.right_bottom_icon ul li:nth-child(3) a{
+				background: url(../img/京东全部图片/页面右侧小图标/话费.png) no-repeat -25px -50px;
+			}
+			.right_bottom_icon ul li:nth-child(4) a{
+				background: url(../img/京东全部图片/页面右侧小图标/话费.png) no-repeat -25px -75px;
+			}
+			.right_bottom_icon ul li:nth-child(5) a{
+				background: url(../img/京东全部图片/页面右侧小图标/话费.png) no-repeat -25px -99px;
+			}
+			.right_bottom_icon ul li:nth-child(6) a{
+				background: url(../img/京东全部图片/页面右侧小图标/话费.png) no-repeat -25px -124px;
+			}
+			.right_bottom_icon ul li:nth-child(7) a{
+				background: url(../img/京东全部图片/页面右侧小图标/话费.png) no-repeat -25px -149px;
+			}
+			.right_bottom_icon ul li:nth-child(8) a{
+				background: url(../img/京东全部图片/页面右侧小图标/话费.png) no-repeat -25px -174px;
+			}
+			.right_bottom_icon ul li:nth-child(9) a{
+				background: url(../img/京东全部图片/页面右侧小图标/话费.png) no-repeat -25px -199px;
+			}
+			.right_bottom_icon ul li:nth-child(10) a{
+				background: url(../img/京东全部图片/页面右侧小图标/话费.png) no-repeat -25px -224px;
+			}
+			.right_bottom_icon ul li:nth-child(11) a{
+				background: url(../img/京东全部图片/页面右侧小图标/话费.png) no-repeat -25px -249px;
+			}
+			.right_bottom_icon ul li:nth-child(12) a{
+				background: url(../img/京东全部图片/页面右侧小图标/话费.png) no-repeat -25px -274px;
+			}
+			/*这边底部的图片*/
+			.right_bottom_logo{
+				width: 250px;
+				height: 75px;
+				background: white;
+				float: left;
+			}
+			/*under_lunbo下面的轮播图*/
+			.under_lunbo{
+				overflow: hidden;
+				margin: 10px auto 0;
+				height: 164;
+				width: 1210px;
+			}
+			/*左边的部分*/
+			.under_lunbo_left {
+				float: left;
+			}
+
+			.under_lunbo_left img{
+			    height: 164px;
+			    width: 210px;
+			}
+			/*右边的部分*/
+			/*下面的轮播图*/
+			.under_lunbo_right  {
+				float: left;
+				position: relative;
+				width: 1000px;
+				overflow: hidden;
+				height: 164px;
+				margin-bottom: 20px;
+			}
+			.under_lunbo_right ul {
+				width: 4000px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.under_lunbo_right ul li{
+				float: left;
+				width: 250px;
+			}
+			.under_lunbo_right ul li img{
+				float: left;
+			}
+			/*鼠标移动上去,左右两边的按钮出现*/
+			.under_lunbo_right .list_btn{
+				background: rgba(0,0,0,0.5);
+				width: 30px;
+				height: 50px;
+				position: absolute;
+				top: 50%;
+				margin-top: -25px;
+				line-height: 50px;
+				color: #FFFF00;
+				font-size: 40px;
+				display: none;
+				cursor: pointer;
+				z-index: 200;
+			}
+			.list_btn_1{
+				left: 0;
+			}
+			.list_btn_2{
+				right: 0;
+			}
+			.under_lunbo_right:hover .list_btn{
+				display: block;
+			}
+			
+			/*京东,品质生活*/
+			.Jingdong_quality_life{
+				width: 1210px;
+				margin: 20px auto;
+				overflow: hidden;
+			}
+			.Jingdong_quality_life > h2{
+				color: #333;
+			    font-size: 20px;
+			    line-height: 36px;
+			}
+			.JD_life_content {
+				height: 405px;
+				border: 1px solid #ededed;
+				overflow: hidden;
+			}
+			.JD_life_content .mThreeTitle{
+				width: 102px;
+			    height: 19px;
+			    overflow: hidden;
+			}   
+			/*左边部分的内容*/
+			.JD_life_content_col1 {
+				background-color: #f7f7f7;
+				width: 402px;
+				float: left;
+				overflow: hidden;
+			}
+			.JD_life_content_col1 a{
+				position: relative;
+				float: left;
+			}
+			/*三列通用的样式*/
+			.JD_life_content a > p{
+				font: 700 15px/40px 'Microsoft Yahei';
+			    color: #333;
+			    text-align: center;
+			    border-bottom: 1px dashed #e0e0e0;
+			}
+
+			.JD_life_content_col1 a > div.sub_text,.JD_life_content_col3 a > div.sub_text{
+				position: absolute;
+			    left: 60px;
+			    top: 90px;			
+			}
+			.JD_life_content a > div.sub_text .mTitle{
+				font-weight: 700;
+				font-size: 16px;
+				margin-bottom: 12px;
+			}
+			.JD_life_content a > div.sub_text .mSubtitle{
+				margin-bottom: 4px;
+			}
+			.JD_life_content a > div.sub_text .mThreeTitletitle{
+				color: #c81623;
+			}
+			/*中间的部分*/	
+			.JD_life_content_col2{
+				background-color: #ffffff;
+				width: 229px;
+				float: left;
+			}
+			.JD_life_content_col2 a{
+				width: 229px;
+				float: left;
+				position: relative;
+			}
+			.JD_life_content_col2 a > div.sub_text{
+				position: absolute;
+			    left: 10px;
+			    top: 90px;			
+			}
+			/*保证下面一排的文字都对齐*/
+			.JD_life_content_col1 a:nth-child(2) > div.sub_text,
+			.JD_life_content_col1 a:nth-child(3) > div.sub_text,
+			.JD_life_content_col2 a:nth-child(2) > div.sub_text,
+			.JD_life_content_col3 a:nth-child(2) > div.sub_text,
+			.JD_life_content_col3 a:nth-child(3) > div.sub_text
+			{
+				position: absolute;
+			    left: 10px;
+			    top: 30px;			
+			}
+
+			/*右边部分*/
+			.JD_life_content_col3{
+				background-color: #f7f7f7;
+				width: 402px;
+				float: left;
+				overflow: hidden;
+			}
+			.JD_life_content_col3 a{
+				float: left;
+				position: relative;
+			}
+			/*右边分支类的部分*/
+			.JD_life_content_col4{
+				overflow: hidden;
+				background: white;
+			}
+			/*分支的左右边*/
+			.JD_life_content_col4 .brands_left, .JD_life_content_col4 .brands_right {
+				border-right: 1px dashed #e0e0e0;
+				width: 85px;
+			}	
+			.JD_life_content_col4 ul {
+				overflow: hidden;
+				float: left;
+			}
+			.JD_life_content_col4  ul li{
+				position: relative;
+				float: left;
+				width: 65px;
+				padding: 0 5px;
+				height: 57px;
+				margin: 0 5px;
+				border-bottom: 1px dashed #e0e0e0;
+			}
+			/*<!--品质生活下方的banner-->*/
+			.floor_banner{
+				height: 110px;
+				margin-bottom: 30px;
+				overflow: visible;
+			}
+			.floor_banner_main {
+				margin: 0 auto;
+				overflow: hidden;
+				width: 1210px;				
+			}
+			.floor_banner_main a{
+				float: left;
+			}
+			
+			
+			
+			

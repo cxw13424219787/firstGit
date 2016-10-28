@@ -1,0 +1,96 @@
+			#footer{
+				height: 457px;
+				overflow: hidden;
+				padding-bottom: 20px;
+			}
+			#footer .footer_service{
+				margin-bottom: 20px;
+			}
+			.footer_service_slogen{
+				background: #F5F5F5;
+			}
+			.footer_service .slogen{
+				position: relative;
+				height: 54px;
+				padding: 20px 0;
+				margin-bottom: 14px;
+				background: #F5F5F5;
+				text-align: center;
+			}
+			.footer_service .slogen li{
+				width: 302px;
+				float: left;
+			}
+			/*广告栏*/
+			.slogen li.fore1{
+				background: url(../img/京东全部图片/底部/footer/楼层多快好省.png) no-repeat 16px -130px;
+				height: 56px;
+			}
+			.slogen li.fore2{
+				background: url(../img/京东全部图片/底部/footer/楼层多快好省.png) no-repeat 16px -194px;
+				height: 56px;
+			}
+			.slogen li.fore3{
+				background: url(../img/京东全部图片/底部/footer/楼层多快好省.png) no-repeat 16px -259px;
+				height: 56px;
+			}
+			.slogen li.fore4{
+				background: url(../img/京东全部图片/底部/footer/楼层多快好省.png) no-repeat 16px -322px;
+				height: 56px;
+			}
+			/*底部的内容*/
+			#footer {
+				background: white;
+			}
+			#footer .footer_service .footer_content {
+				overflow: hidden;
+			}
+			
+			.footer_service .footer_content dl{
+				float: left;
+				width: 199px;
+			}
+			.footer_service .footer_content dl dt{
+			    padding: 6px 0;
+			    font: 400 16px/24px "microsoft yahei";
+			}
+			.footer_service .footer_content dl dd{
+				line-height: 20px;
+			}
+			#footer .footer_content .fore5{
+				width: 100px;
+			}
+			#footer_news{
+				float: right;
+				width: 310px;
+				height: 168px;
+				overflow: hidden;
+				background: url(../img/京东全部图片/底部/footer/footer右地图邮箱.png) no-repeat 60px -131px;
+			}
+			#footer_news .dt{
+				padding: 6px 40px 15px 80px;
+				font: 400 16px/24px "microsoft yahei";
+			}
+			#footer_news .dd{
+				padding: 0 40px 15px 80px;
+			}
+			#footer_news .look{
+				text-align: right;
+			}
+			/*最底部的内容*/
+			#footer_bottom{
+				border-top: 1px solid #E5E5E5;
+				padding: 20px 30px;
+				text-align: center;
+			}
+			#footer_bottom .link a{
+				margin: 0 10px;
+			}
+			/*copyright版权部分*/
+			.copyright {
+				margin: 10px 0;
+			}
+			.copyright span{
+				font-size: 12px;
+			}
+			

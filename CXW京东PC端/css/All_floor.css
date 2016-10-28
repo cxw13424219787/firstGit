@@ -1,0 +1,294 @@
+			/*<!--
+				开始写楼层了
+				1,2,3,4,5
+				6,7,8,9,10
+				11,12
+			-->*/
+			/*全部楼层通用样式*/
+			/*改变楼层标题的样式*/
+			.floor {
+				margin-bottom: 30px;
+				background: white;
+			}
+			.floor h2 {
+			    position: relative;
+			    padding-left: 40px;
+			    color: #333;
+				float: left;
+				display: inline-block;
+				line-height: 30px;
+				font-size: 20px;
+			}
+			/*1,2,3F背景图标的颜色,在未到达前是灰色的*/
+			.floor h2::before {
+			    content: "";
+			    position: absolute;
+			    top: 2px;
+			    left: 0;
+			    width: 31px;
+			    height: 25px;
+			    background-position: 0 -35px;
+			}
+			.floor h2 i {
+			    position: absolute;
+			    color: white;
+			    text-align: center;
+			    top: 2px;
+			    left: 0;
+			    width: 21px;
+			    height: 25px;
+			    padding-right: 10px;
+			    background: url(../img/京东全部图片/页面右侧小图标/product_home_1.0.0.png) no-repeat 0px 0px;
+			}
+			/*标题右边tab栏选项的通用样式*/
+			.floor .tab-item span {
+			    position: absolute;
+			    width: 1px;
+			    background: #ccc;
+			    overflow: hidden;
+			    height: 14px;
+			    top: 10px;
+			    right: 0;
+			}
+			.floor .tab-item {
+			    float: left;
+			    display: inline;
+			    height: 34px;
+			    position: relative;
+			}
+			.floor .mt .tab {
+			    margin-top: 1px;
+			    float: right;
+			    display: inline;
+			}
+			.floor .tab-item a {
+			    float: left;
+			    height: 34px;
+			    padding: 0 16px;
+			    text-decoration: none;
+			    line-height: 34px;
+			    overflow: hidden;
+			    background: #fff;
+			    border-left: solid 1px #fff;
+			    border-right: solid 1px #fff;
+			    white-space: nowrap;
+			    z-index: 5;
+			}
+			.floor .mt {
+			    border-bottom: 1px solid #c81623;
+			    overflow: visible;
+			    position: relative;
+			    height: 35px;
+			}
+			.floor .tab-selected a {
+			    border-left: solid 1px #c81623;
+			    border-right: solid 1px #c81623;
+			    border-top: solid 3px #c81623;
+			    top: -1px;
+			    left: -1px;
+			    height: 32px;
+			    line-height: 30px;
+			    color: #c81623 !important;
+			    text-indent: 1px;
+			}
+			/*楼层side(左边)部分,改变左边的side的格式*/
+			.floor .side{
+				float: left;
+				width: 330px;
+				overflow: hidden;
+			}
+			.floor .side .sideInner{
+				position: relative;
+				width: 330px;
+				background: #e5ebeb;
+				overflow: hidden;
+			}
+			.floor .sideInner .banner{
+				position: relative;
+				height: 474px;
+			}
+			.floor .banner a {
+			    display: block;
+			    height: 475px;
+			}
+			/*楼层side(左边)部分,通用的主题格式*/
+			.floor .themes {
+			    position: relative;
+			    padding-left: 10px;
+			    height: 92px;
+			    margin-top: -237px;
+			    overflow: hidden;
+			    background: rgba(255,255,255,.5);
+			} 
+			.floor .themes a{
+				float: left;
+			}
+			.floor .themes li {
+			    float: left;
+			    width: 98px;
+			    height: 26px;
+			    padding: 10px 0;
+			}  
+			.floor .themes i,.floor .themes span {
+			    float: left;
+			    height: 26px;
+			    overflow: hidden;
+			    line-height: 26px;
+			}
+			/*楼层side(左边)部分,文字部分的通用样式*/
+			.floor .words {
+			    position: relative;
+			    height: 76px;
+			    background: rgba(255,255,255,.7);
+    		}
+			.floor .words li {
+			    float: left;
+			    width: 135px;
+			    height: 48px;
+			    padding: 7px 0 0 25px;
+			    overflow: hidden;
+			}			
+			.floor .words li > a {
+			    float: left;
+			    margin-right: 10px;
+			    line-height: 24px;
+			    white-space: nowrap;
+			}
+			/*main的通用部分*/
+			.floor .main-select{
+				display: block !important;
+			}
+			.floor .main {
+			    width: 880px;
+			    height: 633px;
+			    overflow: hidden;
+			}
+			.floor .main-body {
+			    float: left;
+			    width: 660px;
+			    position: relative;
+			}
+			.floor .main-inner {
+			    position: relative;
+			}
+			
+			.floor .main-inner a {
+			    display: block;
+			    border-right: 1px solid #EDEDED;
+			    border-bottom: 1px solid #EDEDED;
+			}
+			.floor .main-inner li {
+			    width: 219px;
+			    font-size: 0;
+			    float: left;
+			}
+			.floor .main-extra {
+			    display: block;
+			    overflow: hidden;
+			}
+			.floor .main-extra {
+			    float: left;
+			    width: 220px;
+			}
+			/*其他通用模式p-list部分*/
+			.floor .p-list {
+			    width: 670px;
+			    height: 474px;
+			    overflow: hidden;
+			}
+			/*在p-list部分的通用样式*/
+			.floor .p-list li {
+			    float: left;
+			    width: 160px;
+			    height: 230px;
+			    padding: 6px 17px 0;
+			    border-bottom: 1px solid #ededed;
+			    border-right: 1px solid #ededed;
+			    overflow: hidden;
+			}			
+			/*图片的通用样式*/
+			.floor .p-list .p-img {
+			    height: 140px;
+			    margin-bottom: 4px;
+			    text-align: center;
+			    padding-top: 15px;
+			}			
+			/*商品名称的通用样式*/
+			.floor .p-list .p-name {
+			    height: 3em;
+			    margin-bottom: 3px;
+			}			
+			/*价钱的通用样式*/
+			.floor .p-list .p-price {
+			    font-size: 15px;
+			    font-family: Verdana;
+			    color: #E4393C;
+			}
+		
+			/*下面图片列表的通用格式
+			 * img-list
+			 */
+			.floor .img-list {
+			    width: 670px;
+			    height: 159px;
+			    overflow: hidden;
+			}
+			.floor .img-list li {
+			    float: left;
+			    width: 219px;
+			    height: 158px;
+			    border-bottom: 1px solid #ededed;
+			    border-right: 1px solid #ededed;
+			}	
+			/*通用楼层里面的轮播图*/
+			/*重点!!!*/
+			/*鼠标移动上去,左右两边的按钮出现*/
+			/*底层main-body里面的轮播图*/	
+			/*轮播图的通用样式,个别需要改的通过权级的方式*/		
+			.floor .slide {
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    width: 439px;
+			    height: 236px;
+			    overflow: hidden;
+			    border-right: 1px solid #EDEDED;
+			    border-bottom: 1px solid #EDEDED;
+			}
+			.floor .list_btn{
+				background: rgba(0,0,0,0.5);
+				width: 30px;
+				height: 50px;
+				position: absolute;
+				top: 50%;
+				margin-top: -25px;
+				line-height: 50px;
+				color: #FFFF00;
+				font-size: 40px;
+				display: none;
+				cursor: pointer;
+				z-index: 200;
+			}
+			.floor .list_btn_1{
+				left: 0;
+			}
+			.floor .list_btn_2{
+				right: 0;
+			}
+			/*鼠标滑动上去出现两个箭头*/
+			.floor .slide:hover .list_btn{
+				display: block;
+			}
+			.floor .slide .slide-body .LunBoNum{
+				left: 220px;
+	    		top: 277px;
+			}
+			/*让文字改变的通用样式*/
+			.style-red {
+			    color: #C81623;
+			}
+			/*楼层4,5,6,7,8,9,10,11,12*/
+			#floor_4,#floor_5,#floor_6,#floor_7,#floor_8,#floor_9,#floor_10,#floor_11,#floor_12{
+				height: 520px;
+			}
+			

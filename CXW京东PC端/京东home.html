@@ -1,0 +1,1518 @@
+<!DOCTYPE html> 
+<html>
+	<!-- -------------------------------
+	Site: index.html
+	Author:蔡晓伟
+	Updated:2016/4/1
+	Updated by:Name
+	------------------------------- -->
+	<!--一、使用JQ实现cookies：
+		参考教程：http://www.jb51.net/article/44557.htm
+		1、引入jQuery与jQuery.Cookie.js插件。
+		2、$.cookie("name", $(":radio[checked]").val(), {path: "/", expires: 7})
+			第一个参数：要设置的cookies名称
+			第二个参数：对应的值
+			第三个参数：option参数  {路径："",日期：7,...}
+					路径  cookie值保存的路径，默认与创建页路径一致。
+					domin: cookie域名属性，默认与创建页域名一样。这个地方要相当注意，跨域的概念，如果要主域名二级域名有效则要设置".xxx.com"
+					secrue:一个布尔值，表示传输cookie值时，是否需要一个安全协议。
+		3、读取cookie值　$.cookie(cookieName)
+		4、删除cookie，通过传递null作为cookie的值即可：$.cookie('the_cookie', null);
+		3、切记：cookies中的name不能一致，会覆盖-->
+	
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!--引入头文件的JQ-->
+		<script type="text/javascript" src="javaScript/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//这段代码表示的意思是在自己写好的header.js引入进来后我们在
+				//进行加载header.html,如果没有等到header.js加载完后再
+				//加载header.html会出现JS效果已经不存在的现象,所以一定
+				//要保证JS效果加载进来后再加载header.html
+				$("#head").load("header.html",function(){
+					var script = document.createElement('script');
+					script.src = "javaScript/header/header.js";
+					$('body').append(script);
+				});
+				//给所有的floor_banner加上这个
+				$(".floor_banner").load("floor_banner.html");
+				$("#foot").load("footer.html");
+//				$("#guessyou").load("guessyoulike.html");
+				
+			})
+		</script>
+
+		<!--CSS样式-->
+		<!--头部的样式-->
+		<link rel="stylesheet" href="css/header.css" />
+		<!--除去楼层上面的主要样式-->
+		<link rel="stylesheet" href="css/main_nav.css" />
+		<!--上层轮播图的样式-->
+		<link rel="stylesheet" href="css/lunbo.css" />
+		<!--所有楼层的样式-->
+		<link rel="stylesheet" type="text/css" href="css/All_floor.css"/>
+		<!--楼层1-->
+		<link rel="stylesheet" href="css/floor1.css" />
+		<!--楼层2-->
+		<link rel="stylesheet" href="css/floor2.css" />
+		<!--楼层3-->
+		<link rel="stylesheet" href="css/floor3.css" />
+		<!--楼层之间的广告-->
+		<link rel="stylesheet" href="css/floor_banner.css" />
+		<!--最底部的内容-->
+		<link rel="stylesheet" href="css/footer.css" />
+		<!--左边楼梯的样式-->
+		<link rel="stylesheet" href="css/tooBar_left_LoutiNav.css" />
+		<!--右边楼梯的样式-->
+		<link rel="stylesheet" type="text/css" href="css/tooBar_right_LoutiNav.css"/>
+		<!--猜你喜欢-->
+		<link rel="stylesheet" href="css/guessyoulike.css" />
+		<!--<link rel="stylesheet" href="css/tooBar_right_LoutiNav.css" />-->
+	</head>
+
+	<body>
+		<!-- container大容器 -->
+		<!--<div class="container">-->
+			<div id="head">
+				<!--用来放头部文件的-->
+			</div>
+			<!--main_nav部分-->
+			<!--主页导航的部分-->
+			<div class="main_nav w">
+				<div class="nav_dt">
+					<a href="#none">全部商品</a>
+				</div>
+				<div class="shop_group">
+					<ul class="group1">
+						<li><a href="#none">服装城</a></li>
+						<li><a href="#none">美妆城</a></li>
+						<li><a href="#none">京东超市</a></li>
+						<li><a href="#none">生鲜</a></li>
+					</ul>
+					<ul class="group2">
+						<li><a href="#none">全球购</a></li>
+						<li><a href="#none">闪购</a></li>
+						<li><a href="#none">团购</a></li>
+						<li><a href="#none">拍卖</a></li>
+						<li><a href="#none">金融</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<!--主页中间部分的内容-->
+			<!-- dd_content内容部分 -->
+			<div class="bigbox_center w">
+			<!--在首页main左边li的部分-->
+			<div class="all_content">
+				<div class="dd_content">
+					<ul class="dd_inner">
+						<li class="item fore1">
+							<!--通过json的方式添加标题h3-->
+					   		<i>&gt;</i>
+					   		<!--滑到Li的时候出现右边的板式-->
+					   		<div class="fore_sub">
+					   			<!--右边板式的上方-->
+					   			<div class="fore_sub_top">
+					   				<div class="channels">
+									<!--通过json的方式添加内部上方的标题-->
+					   				</div>
+					   			</div>
+					   			<div class="fore_sub_bottom">
+									<!--<dl>
+										<dt></dt>
+										<dd>
+											<div><a>second</a></div>
+										</dd>
+									</dl>-->
+					   			</div>
+					   		</div>
+					   	</li>					
+						<li class="item fore2">
+					   		<i>&gt;</i>
+					   		<div class="fore_sub">
+					   			<!--右边板式的上方-->
+					   			<div class="fore_sub_top">
+					   				<div class="channels">
+									<!--通过json的方式添加内部上方的标题-->
+					   				</div>
+					   			</div>
+					   			<div class="fore_sub_bottom">
+
+					   			</div>
+					   		</div>
+					   	</li>					
+						<li class="item fore3">
+					   		<i>&gt;</i>
+					   		<div class="fore_sub">
+					   			<!--右边板式的上方-->
+					   			<div class="fore_sub_top">
+					   				<div class="channels">
+									<!--通过json的方式添加内部上方的标题-->
+					   				</div>
+					   			</div>
+					   			<div class="fore_sub_bottom">
+
+					   			</div>
+					   		</div>
+					   	</li>					
+						<li class="item fore4">
+					   		<i>&gt;</i>
+					   		<div class="fore_sub">
+					   			<!--右边板式的上方-->
+					   			<div class="fore_sub_top">
+					   				<div class="channels">
+									<!--通过json的方式添加内部上方的标题-->
+					   				</div>
+					   			</div>
+					   			<div class="fore_sub_bottom">
+
+					   			</div>
+					   		</div>
+					   	</li>					
+						<li class="item fore5">
+					   		<i>&gt;</i>
+					   		<div class="fore_sub">
+					   			<!--右边板式的上方-->
+					   			<div class="fore_sub_top">
+					   				<div class="channels">
+									<!--通过json的方式添加内部上方的标题-->
+					   				</div>
+					   			</div>
+					   			<div class="fore_sub_bottom">
+
+					   			</div>
+					   		</div>
+					   	</li>					
+						<li class="item fore6">
+					   		<i>&gt;</i>
+					   		<div class="fore_sub">
+					   			<!--右边板式的上方-->
+					   			<div class="fore_sub_top">
+					   				<div class="channels">
+									<!--通过json的方式添加内部上方的标题-->
+					   				</div>
+					   			</div>
+					   			<div class="fore_sub_bottom">
+
+					   			</div>
+					   		</div>
+					   	</li>					
+						<li class="item fore7">
+					   		<i>&gt;</i>
+					   		<div class="fore_sub">
+					   			<!--右边板式的上方-->
+					   			<div class="fore_sub_top">
+					   				<div class="channels">
+									<!--通过json的方式添加内部上方的标题-->
+					   				</div>
+					   			</div>
+					   			<div class="fore_sub_bottom">
+
+					   			</div>
+					   		</div>
+					   	</li>					
+						<li class="item fore8">
+					   		<i>&gt;</i>
+					   		<div class="fore_sub">
+					   			<!--右边板式的上方-->
+					   			<div class="fore_sub_top">
+					   				<div class="channels">
+									<!--通过json的方式添加内部上方的标题-->
+					   				</div>
+					   			</div>
+					   			<div class="fore_sub_bottom">
+
+					   			</div>
+					   		</div>
+					   	</li>					
+						<li class="item fore9">
+					   		<i>&gt;</i>
+					   		<div class="fore_sub">
+					   			<!--右边板式的上方-->
+					   			<div class="fore_sub_top">
+					   				<div class="channels">
+									<!--通过json的方式添加内部上方的标题-->
+					   				</div>
+					   			</div>
+					   			<div class="fore_sub_bottom">
+
+					   			</div>
+					   		</div>
+					   	</li>					
+						<li class="item fore10">
+					   		<i>&gt;</i>
+					   		<div class="fore_sub">
+					   			<!--右边板式的上方-->
+					   			<div class="fore_sub_top">
+					   				<div class="channels">
+									<!--通过json的方式添加内部上方的标题-->
+					   				</div>
+					   			</div>
+					   			<div class="fore_sub_bottom">
+
+					   			</div>
+					   		</div>
+					   	</li>					
+						<li class="item fore11">
+					   		<i>&gt;</i>
+					   		<div class="fore_sub">
+					   			<!--右边板式的上方-->
+					   			<div class="fore_sub_top">
+					   				<div class="channels">
+									<!--通过json的方式添加内部上方的标题-->
+					   				</div>
+					   			</div>
+					   			<div class="fore_sub_bottom">
+
+					   			</div>
+					   		</div>
+					   	</li>					
+						<li class="item fore12">
+					   		<i>&gt;</i>
+					   		<div class="fore_sub">
+					   			<!--右边板式的上方-->
+					   			<div class="fore_sub_top">
+					   				<div class="channels">
+									<!--通过json的方式添加内部上方的标题-->
+					   				</div>
+					   			</div>
+					   			<div class="fore_sub_bottom">
+
+					   			</div>
+					   		</div>
+					   	</li>					
+						<li class="item fore13">
+					   		<i>&gt;</i>
+					   		<div class="fore_sub">
+					   			<!--右边板式的上方-->
+					   			<div class="fore_sub_top">
+					   				<div class="channels">
+									<!--通过json的方式添加内部上方的标题-->
+					   				</div>
+					   			</div>
+					   			<div class="fore_sub_bottom">
+
+					   			</div>
+					   		</div>
+					   	</li>					
+						<li class="item fore14">
+					   		<i>&gt;</i>
+					   		<div class="fore_sub">
+					   			<!--右边板式的上方-->
+					   			<div class="fore_sub_top">
+					   				<div class="channels">
+									<!--通过json的方式添加内部上方的标题-->
+					   				</div>
+					   			</div>
+					   			<div class="fore_sub_bottom">
+
+					   			</div>
+					   		</div>
+					   	</li>					
+						<li class="item fore15">
+					   		<i>&gt;</i>
+					   		<div class="fore_sub">
+					   			<!--右边板式的上方-->
+					   			<div class="fore_sub_top">
+					   				<div class="channels">
+									<!--通过json的方式添加内部上方的标题-->
+					   				</div>
+					   			</div>
+					   			<div class="fore_sub_bottom">
+
+					   			</div>
+					   		</div>
+					   	</li>					
+
+					</ul>
+					<!--<div class="fore_dorpdown_layer">
+						
+					</div>					-->
+					
+				</div>
+				<!--中间的轮播图-->
+				<div class="content_center lunbo">
+						<ul class="LunBoPic">
+							<li><img src=""/></li>
+							<li><img src=""/></li>
+							<li><img src=""/></li>
+							<li><img src=""/></li>
+							<li><img src=""/></li>
+							<li><img src=""/></li>
+						</ul>
+						<div class="LunBoNum">
+							<span class="CurrentNum">1</span>
+							<span>2</span>
+							<span>3</span>
+							<span>4</span>
+							<span>5</span>
+							<span>6</span>
+						</div>
+						<div class="btn btn_1">&lt;</div>
+						<div class="btn btn_2">&gt;</div>
+				</div>
+
+
+			</div>
+			<!--大内容的右边部分all_content_right-->
+			<div class="all_content_right">
+				<!--上部分-->
+				<div class="all_content_right_top">
+					<!--上部分有两块地方-->
+					<div class="all_content_right_top1">
+						<h2 class="fl">京东快报</h2>
+						<div class="fr right_top1_more">
+							<a href="#none">更多></a>
+						</div>
+					</div>
+					<div class="all_content_right_top2">
+						<ul>
+							<li><a href="#none"><span>[特惠]</span>智能厨师锅五折秒杀直降649元</a></li>
+							<li><a href="#none"><span>[公告]</span>放心肉就在这</a></li>
+							<li><a href="#none"><span>[特惠]</span>FIIL Diva京东独家首发</a></li>
+							<li><a href="#none"><span>[特惠]</span>"放心肉"就在京东生鲜</a></li>
+							<li><a href="#none"><span>[公告]</span>海飞丝 第一支护肤洗发水</a></li>
+						</ul>
+					</div>
+					
+				</div>
+				<!--下部分-->
+				<div class="all_content_right_bottom">
+					<!--<ul class="right_bottom_channels">
+						<li><a href="#none">话费</a>
+							<div class="phone_free">
+								
+							</div>
+						</li>
+						<li><a href="#none">机票</a></li>
+						<li><a href="#none">电影票</a></li>
+						<li><a href="#none">游戏</a></li>
+					</ul>-->
+					<div class="right_bottom_icon">
+						<ul>
+							<li><a href="#none"></a><span>话费</span></li>
+							<li><a href="#none"></a><span>机票</span></li>
+							<li><a href="#none"></a><span>电影票</span></li>
+							<li><a href="#none"></a><span>游戏</span></li>
+							<li><a href="#none"></a><span>彩票</span></li>
+							<li><a href="#none"></a><span>加油卡</span></li>
+							<li><a href="#none"></a><span>酒店</span></li>
+							<li><a href="#none"></a><span>火车票</span></li>
+							<li><a href="#none"></a><span>众筹</span></li>
+							<li><a href="#none"></a><span>理财</span></li>
+							<li><a href="#none"></a><span>礼品卡</span></li>
+							<li><a href="#none"></a><span>白条</span></li>
+						</ul>
+					</div>
+					<div class="right_bottom_logo">
+						<img src="img/京东全部图片/头部/header/right_bottom.jpg"/>
+					</div>
+				</div>
+			</div>
+			</div><!--bigbox_center结束-->
+			<!--下方的轮播图-->
+			<div class="under_lunbo">
+				<div class="under_lunbo_left">
+					<img src="img/京东全部图片/头部/header/今日推荐.png"/>
+				</div>
+				<div class="under_lunbo_right">
+					<ul class="under_lunbo_right_list">
+						<li><img src="img/京东全部图片/头部/top-猜你喜欢-上面的轮播图/1.jpg"/></li>
+						<li><img src="img/京东全部图片/头部/top-猜你喜欢-上面的轮播图/2.jpg"/></li>
+						<li><img src="img/京东全部图片/头部/top-猜你喜欢-上面的轮播图/3.jpg"/></li>
+						<li><img src="img/京东全部图片/头部/top-猜你喜欢-上面的轮播图/4.jpg"/></li>
+						<li><img src="img/京东全部图片/头部/top-猜你喜欢-上面的轮播图/5.jpg"/></li>
+						<li><img src="img/京东全部图片/头部/top-猜你喜欢-上面的轮播图/6.jpg"/></li>
+						<li><img src="img/京东全部图片/头部/top-猜你喜欢-上面的轮播图/7.jpg"/></li>
+						<li><img src="img/京东全部图片/头部/top-猜你喜欢-上面的轮播图/8.jpg"/></li>
+					</ul>
+					<div class="list_btn list_btn_1">&lt;</div>
+					<div class="list_btn list_btn_2">&gt;</div>
+					
+				</div>
+			</div>
+			<!--猜你喜欢-->
+			<div id="guessyou">
+				<div id="guessyoulike" class="w">
+					<div class="mt">
+						<h2>猜你喜欢</h2>
+						<a href="#none">换一批</a>
+					</div>
+					<div class="mc">
+						<div class="spacer">
+							<i></i>
+						</div>
+						<!--通过json的方式导入图片-->
+						<ul>
+							<li class="fore1">
+								<div class="p-img">
+									<a href="#none"><img src="img/京东全部图片/头部/top-猜你喜欢-电脑/1.jpg" alt="" /> </a>
+								</div>
+								<div class="p-info">
+									<div class="p-name"><a href="#none">【京东超市】</a></div>
+									<div class="p-price"><a href="#none"><i>$</i>48</a></div>
+								</div>
+								<div class="car_btn">
+									<a href="#none">加入购物车</a>
+								</div>
+							</li>
+							<li class="fore1">
+								<div class="p-img">
+									<a href="#none"><img src="img/京东全部图片/头部/top-猜你喜欢-电脑/2.jpg" alt="" /> </a>
+								</div>
+								<div class="p-info">
+									<div class="p-name"><a href="#none">【魅力超市】洗颜专科 柔澈泡沫</a></div>
+									<div class="p-price"><a href="#none"><i>$</i>58</a></div>
+								</div>
+								<div class="car_btn">
+									<a href="#none">加入购物车</a>
+								</div>
+							</li>
+							<li class="fore1">
+								<div class="p-img">
+									<a href="#none"><img src="img/京东全部图片/头部/top-猜你喜欢-电脑/3.jpg" alt="" /> </a>
+								</div>
+								<div class="p-info">
+									<div class="p-name"><a href="#none">【XX超市】洗颜专科 柔澈泡沫 洁面乳 120g（资生堂旗下）</a></div>
+									<div class="p-price"><a href="#none"><i>$</i>68</a></div>
+								</div>
+								<div class="car_btn">
+									<a href="#none">加入购物车</a>
+								</div>
+							</li>
+							<li class="fore1">
+								<div class="p-img">
+									<a href="#none"><img src="img/京东全部图片/头部/top-猜你喜欢-电脑/4.jpg" alt="" /> </a>
+								</div>
+								<div class="p-info">
+									<div class="p-name"><a href="#none">【ZZ超市】洗颜专科 柔澈泡沫 洁面乳 120g（资生堂旗下）</a></div>
+									<div class="p-price"><a href="#none"><i>$</i>78</a></div>
+								</div>
+								<div class="car_btn">
+									<a href="#none">加入购物车</a>
+								</div>
+							</li>
+							<li class="fore1">
+								<div class="p-img">
+									<a href="#none"><img src="img/京东全部图片/头部/top-猜你喜欢-电脑/5.jpg" alt="" /> </a>
+								</div>
+								<div class="p-info">
+									<div class="p-name"><a href="#none">【BB超市】洗颜专科 柔澈泡沫 洁面乳 120g（资生堂旗下）</a></div>
+									<div class="p-price"><a href="#none"><i>$</i>88</a></div>
+								</div>
+								<div class="car_btn">
+									<a href="#none">加入购物车</a>
+								</div>
+							</li>
+							<li class="fore1">
+								<div class="p-img">
+									<a href="#none"><img src="img/京东全部图片/头部/top-猜你喜欢-电脑/6.jpg" alt="" /> </a>
+								</div>
+								<div class="p-info">
+									<div class="p-name"><a href="#none">【CC超市】洗颜专科 柔澈泡沫 洁面乳 120g（资生堂旗下）</a></div>
+									<div class="p-price"><a href="#none"><i>$</i>98</a></div>
+								</div>
+								<div class="car_btn">
+									<a href="#none">加入购物车</a>
+								</div>
+							</li>
+							<!--放入上面所示的图片信息-->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--京东,品质生活-->
+			<div class="Jingdong_quality_life">
+				<h2>京东,品质生活</h2>
+				<div class="JD_life_content">
+					<div class="JD_life_content_col1">
+						<a href="#none">
+							<p>新发现</p>
+							<div class="sub_text">
+								<p class="mTitle">小米</p>
+								<p class="mSubtitle">疯狂24小时</p>
+								<p class="mThreeTitle">好货好机低至1元秒</p>
+							</div>
+							<img src="img/京东全部图片/头部/top-京东-品质生活/1.jpg"/>
+						</a>
+						<a href="#none">
+							<div class="sub_text">
+								<p class="mTitle">小米</p>
+								<p class="mSubtitle">疯狂24小时</p>
+								<p class="mThreeTitle">好货好机低至1元秒</p>
+							</div>
+							<img src="img/京东全部图片/头部/top-京东-品质生活/4.jpg"/>
+						</a>
+						<a href="#none">
+							<div class="sub_text">
+								<p class="mTitle">小米</p>
+								<p class="mSubtitle">疯狂24小时</p>
+								<p class="mThreeTitle">好货好机低至1元秒</p>
+							</div>
+							<img src="img/京东全部图片/头部/top-京东-品质生活/5.jpg"/>
+						</a>
+					</div>
+					<div class="JD_life_content_col2">
+						<a href="#none">
+							<p>新发现</p>
+							<div class="sub_text">
+								<p class="mTitle">小米</p>
+								<p class="mSubtitle">疯狂24小时</p>
+								<p class="mThreeTitle">好货好机低至1元秒</p>
+							</div>
+							<img src="img/京东全部图片/头部/top-京东-品质生活/2.jpg"/>
+						</a>
+						<a href="#none">
+							<div class="sub_text">
+								<p class="mTitle">小米</p>
+								<p class="mSubtitle">疯狂24小时</p>
+								<p class="mThreeTitle">好货好机低至1元秒</p>
+							</div>
+							<img src="img/京东全部图片/头部/top-京东-品质生活/6.jpg"/>
+						</a>
+						
+					</div>
+					<div class="JD_life_content_col3">
+						<a href="#none">
+							<p>新发现</p>
+							<div class="sub_text">
+								<p class="mTitle">小米</p>
+								<p class="mSubtitle">疯狂24小时</p>
+								<p class="mThreeTitle">好货好机低至1元秒</p>
+							</div>
+							<img src="img/京东全部图片/头部/top-京东-品质生活/1.jpg"/>
+						</a>
+						<a href="#none">
+							<div class="sub_text">
+								<p class="mTitle">小米</p>
+								<p class="mSubtitle">疯狂24小时</p>
+								<p class="mThreeTitle">好货好机低至1元秒</p>
+							</div>
+							<img src="img/京东全部图片/头部/top-京东-品质生活/7.png"/>
+						</a>
+						<a href="#none">
+							<div class="sub_text">
+								<p class="mTitle">小米</p>
+								<p class="mSubtitle">疯狂24小时</p>
+								<p class="mThreeTitle">好货好机低至1元秒</p>
+							</div>
+							<img src="img/京东全部图片/头部/top-京东-品质生活/5.jpg"/>
+						</a>
+						
+					</div>
+					<!--最右边的分支部分-->
+					<div class="JD_life_content_col4">
+						<div class="brands_left fl">
+							<ul>
+								<li><a href="#none"><img src="img/京东全部图片/头部/top-京东-品质生活/京东-品质生活-right/1.jpg"/></a></li>
+								<li><a href="#none"><img src="img/京东全部图片/头部/top-京东-品质生活/京东-品质生活-right/2.jpg"/></a></li>
+								<li><a href="#none"><img src="img/京东全部图片/头部/top-京东-品质生活/京东-品质生活-right/3.jpg"/></a></li>
+								<li><a href="#none"><img src="img/京东全部图片/头部/top-京东-品质生活/京东-品质生活-right/4.jpg"/></a></li>
+								<li><a href="#none"><img src="img/京东全部图片/头部/top-京东-品质生活/京东-品质生活-right/5.jpg"/></a></li>
+								<li><a href="#none"><img src="img/京东全部图片/头部/top-京东-品质生活/京东-品质生活-right/6.jpg"/></a></li>
+								<li><a href="#none"><img src="img/京东全部图片/头部/top-京东-品质生活/京东-品质生活-right/7.jpg"/></a></li>
+							</ul>
+						</div>
+						<div class="brands_right fl">
+							<ul>
+								<li><a href="#none"><img src="img/京东全部图片/头部/top-京东-品质生活/京东-品质生活-right/8.jpg"/></a></li>
+								<li><a href="#none"><img src="img/京东全部图片/头部/top-京东-品质生活/京东-品质生活-right/9.jpg"/></a></li>
+								<li><a href="#none"><img src="img/京东全部图片/头部/top-京东-品质生活/京东-品质生活-right/10.jpg"/></a></li>
+								<li><a href="#none"><img src="img/京东全部图片/头部/top-京东-品质生活/京东-品质生活-right/11.jpg"/></a></li>
+								<li><a href="#none"><img src="img/京东全部图片/头部/top-京东-品质生活/京东-品质生活-right/12.jpg"/></a></li>
+								<li><a href="#none"><img src="img/京东全部图片/头部/top-京东-品质生活/京东-品质生活-right/11.jpg"/></a></li>
+								<li><a href="#none"><img src="img/京东全部图片/头部/top-京东-品质生活/京东-品质生活-right/14.jpg"/></a></li>
+							</ul>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--品质生活下方的banner-->
+			<div class="floor_banner">
+			</div>
+			<!--
+				开始写楼层了
+				1,2,3,4,5
+				6,7,8,9,10
+				11,12
+			-->
+			<!--楼层1-->
+			<div class="floor w" id="floor_1">
+				<div class="floor_1">
+					<div class="f1_title mt">
+						<h2>
+							<i>1F</i>服装鞋包</h2>
+						<!--楼层右边的导航栏-->	
+						<ul class="tab">
+							<li class="tab-item tab-selected">
+								<a href="#none">大牌</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">男装</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">女装</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">鞋靴</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">箱包</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">内衣配饰</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">珠宝首饰</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">奢品礼品</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">奢华腕表</a>
+								<span>◆</span>
+							</li>
+						</ul>
+					</div>
+					<!--下面的内容-->
+					<div class="f1_content mc">
+						<div class="side">
+							<div class="sideInner">
+								<div class="banner">
+									<a href="#none">
+										<img src="img/京东全部图片/1F服饰/1F服装鞋包/1F-left1.jpg"/>
+									</a>
+								</div>
+								<ul class="themes">
+									<li class="fore1"><a href="#none"><i class="icon"></i><span>男装</span></a></li>
+									<li class="fore1"><a href="#none"><i class="icon"></i><span>男装</span></a></li>
+									<li class="fore1"><a href="#none"><i class="icon"></i><span>男装</span></a></li>
+									<li class="fore1"><a href="#none"><i class="icon"></i><span>男装</span></a></li>
+									<li class="fore1"><a href="#none"><i class="icon"></i><span>男装</span></a></li>
+									<li class="fore1"><a href="#none"><i class="icon"></i><span>男装</span></a></li>
+								</ul>
+								<ul class="words">
+									<li class="fore1" >
+										<a href="#none" class="style-red">潮流女装</a>
+										<a href="#none">潮流女装</a>
+										<a href="#none">丝巾</a>
+										<a href="#none">潮流女装</a>
+										<a href="#none">潮流女装</a>
+										<a href="#none" class="style-red">潮流女装</a>
+										<a href="#none">潮流女装</a>
+										<a href="#none">潮流女装</a>
+									</li>
+									<li  class="fore2">
+										<a href="#none">潮流女装</a>
+										<a href="#none" class="style-red">潮流女装</a>
+										<a href="#none">淘宝</a>
+										<a href="#none">潮流女装</a>
+										<a href="#none">潮流女装</a>
+										<a href="#none" class="style-red">潮流女装</a>
+										<a href="#none">潮流女装</a>
+										<a href="#none">潮流女装</a>
+									</li>
+								</ul>
+							</div>
+							<div class="side-extra">
+								<img src="img/京东全部图片/1F服饰/1F服装鞋包/1F-left2.jpg"/>
+							</div>
+						</div>
+						<!--中间那一大块地方-->
+						<!--大牌-->
+						<div class="main hide main-select num0">
+							<div class="main-inner">
+								<!--大牌里面中间的部分-->
+								<ul class="main-body">
+									<li class="fore1">
+										<a href="#none"><img src="img/京东全部图片/1F服饰/1F服装鞋包/大牌/center1.jpg"/></a>
+									</li>
+									<li class="fore2">
+										<a href="#none"><img src="img/京东全部图片/1F服饰/1F服装鞋包/大牌/right1.jpg"/></a>
+									</li>
+									<li class="side_lunbo" style="visibility: hidden;">
+										<a href="#none"><img src="img/京东全部图片/1F服饰/1F服装鞋包/大牌/大牌-center2-轮播/1.jpg"/></a>
+									</li>
+									<li class="fore3">
+										<a href="#none"><img src="img/京东全部图片/1F服饰/1F服装鞋包/大牌/right1.jpg"/></a>
+									</li>
+									<li class="fore4">
+										<a href="#none"><img src="img/京东全部图片/1F服饰/1F服装鞋包/大牌/right1.jpg"/></a>
+									</li>
+									<li class="fore5">
+										<a href="#none"><img src="img/京东全部图片/1F服饰/1F服装鞋包/大牌/center3.jpg"/></a>
+									</li>
+									<li class="fore6">
+										<a href="#none"><img src="img/京东全部图片/1F服饰/1F服装鞋包/大牌/right1.jpg"/></a>
+									</li>
+								</ul>
+								<!--//main-body里面那个轮播图,通过绝对定位的方式导入图片-->	
+								<div class="slide">
+									<div class="slide-body">
+										<ul class="slide-main">
+											<li class="slide-img"><a href="#none"><img src="img/京东全部图片/1F服饰/1F服装鞋包/大牌/大牌-center2-轮播/1.jpg"/></a></li>
+											<li class="slide-img"><a href="#none"><img src="img/京东全部图片/1F服饰/1F服装鞋包/大牌/大牌-center2-轮播/2.jpg"/></a></li>
+											<li class="slide-img"><a href="#none"><img src="img/京东全部图片/1F服饰/1F服装鞋包/大牌/大牌-center2-轮播/3.jpg"/></a></li>
+											<li class="slide-img"><a href="#none"><img src="img/京东全部图片/1F服饰/1F服装鞋包/大牌/大牌-center2-轮播/4.jpg"/></a></li>
+										</ul>	
+										<div class="LunBoNum">
+											<span class="CurrentNum">1</span>
+											<span>2</span>
+											<span>3</span>
+											<span>4</span>
+										</div>
+									</div>
+									<div class="list_btn list_btn_1">&lt;</div>
+									<div class="list_btn list_btn_2">&gt;</div>
+								</div>
+								
+								<!--大牌里面最右侧的4张图片-->
+								<ul class="main-extra hide">
+									<li class="fore1">
+										<a href="#none"><img src="img/京东全部图片/1F服饰/1F服装鞋包/大牌/right2.jpg"/></a>
+									</li>
+									<li class="fore1">
+										<a href="#none"><img src="img/京东全部图片/1F服饰/1F服装鞋包/大牌/right2.jpg"/></a>
+									</li>
+									<li class="fore1">
+										<a href="#none"><img src="img/京东全部图片/1F服饰/1F服装鞋包/大牌/right2.jpg"/></a>
+									</li>
+									<li class="fore1">
+										<a href="#none"><img src="img/京东全部图片/1F服饰/1F服装鞋包/大牌/right2.jpg"/></a>
+									</li>
+								
+								</ul>
+							</div>
+						</div>
+						<!--除了大牌以外的其他层数-->
+						<div class="main hide num1">
+							<ul class="p-list">
+							</ul>
+							<ul class="img-list">
+							</ul>
+						</div>
+						<div class="main hide num2">
+							<ul class="p-list">
+							</ul>
+							<ul class="img-list">
+							</ul>
+						</div>
+						<div class="main hide num3">
+							<ul class="p-list">
+							</ul>
+							<ul class="img-list">
+							</ul>
+						</div>
+						<div class="main hide num4">
+							<ul class="p-list">
+							</ul>
+							<ul class="img-list">
+							</ul>
+						</div>
+						<div class="main hide num5">
+							<ul class="p-list">
+							</ul>
+							<ul class="img-list">
+							</ul>
+						</div>
+						<div class="main hide num6">
+							<ul class="p-list">
+							</ul>
+							<ul class="img-list">
+							</ul>
+						</div>
+						<div class="main hide num7">
+							<ul class="p-list">
+							</ul>
+							<ul class="img-list">
+							</ul>
+						</div>
+						<div class="main hide num8">
+							<ul class="p-list">
+							</ul>
+							<ul class="img-list">
+							</ul>
+						</div>
+					</div><!--floor_content结束-->
+				</div><!--floor1_结束-->
+				
+			</div> <!--楼层1结束-->
+			<!--楼层之间的广告-->
+			<div class="floor_banner_more">
+				<ul>
+					<li class="fore1"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/1.jpg"/></a></li>
+					<li class="fore2"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/1.jpg"/></a></li>
+					<li class="fore3"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/1.jpg"/></a></li>
+					<li class="fore4"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/1.jpg"/></a></li>
+					<li class="fore5"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/1.jpg"/></a></li>
+					<li class="fore6"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/1.jpg"/></a></li>
+					<li class="fore7"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/1.jpg"/></a></li>
+					<li class="fore8"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/1.jpg"/></a></li>
+					<li class="fore9"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/1.jpg"/></a></li>
+					<li class="fore10"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/1.jpg"/></a></li>
+				</ul>
+				
+			</div>
+			<!--楼层2-->
+		<div class="floor w" id="floor_2">
+				<div class="floor_2">
+					<div class="f2_title mt">
+						<h2><i>2F</i>个护美妆</h2>
+						<!--楼层右边的导航栏-->	
+						<ul class="tab">
+							<li class="tab-item tab-selected">
+								<a href="#none">热门</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">国际大牌</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">国妆名品</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">个人护理</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">清洁用品</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">纸品湿巾</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">香水彩妆</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">热销面膜</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">男士精品</a>
+								<span>◆</span>
+							</li>
+						</ul>
+					</div>
+					<!--下面的内容-->
+					<div class="f2_content mc">
+						<div class="side" style="width: 210px">
+							<div class="sideInner"  style="width: 210px">
+								<div class="banner">
+									<a href="#none">
+										<img src="img/京东全部图片/2F个护美妆/左侧固定/1.jpg"/>
+									</a>
+								</div>
+								<ul class="themes">
+									<li class="fore1"><a href="#none"><i class="icon"></i><span>男装</span></a></li>
+									<li class="fore1"><a href="#none"><i class="icon"></i><span>男装</span></a></li>
+									<li class="fore1"><a href="#none"><i class="icon"></i><span>男装</span></a></li>
+									<li class="fore1"><a href="#none"><i class="icon"></i><span>男装</span></a></li>
+								</ul>
+								<ul class="words">
+									<li class="fore1" >
+										<a href="#none" class="style-red">出游妆备超低秒杀<span>&gt;</span></a>
+										<a href="#none" class="style-red">出游妆备超低秒杀<span>&gt;</span></a>
+									</li>
+									<li  class="fore2">
+										<a href="#none">潮流女装</a>
+										<a href="#none" class="style-red">潮流女装</a>
+										<a href="#none">淘宝</a>
+										<a href="#none">你好</a>
+										<a href="#none">潮流女装</a>
+										<a href="#none" class="style-red">潮流女装</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--中间那一大块地方-->
+						<!--大牌-->
+						<div class="main hide  main-select  num0">
+							<div class="main-inner">
+								<!--大牌里面中间的部分-->
+								<ul class="main-body">
+									<li class="side_lunbo">
+										<a href="#none"><img src="img/京东全部图片/2F个护美妆/热门/导航1.jpg"/></a>
+										<a href="#none" style=""><img src="img/京东全部图片/2F个护美妆/热门/lunbo_bottom.jpg"/></a>
+									</li>
+									<li class="fore1">
+										<a href="#none"><img src="img/京东全部图片/2F个护美妆/热门/右侧1.jpg"/></a>
+										<a href="#none" style=""><img src="img/京东全部图片/2F个护美妆/热门/右侧4.jpg"/></a>
+									</li>
+									<li class="fore2">
+										<a href="#none"><img src="img/京东全部图片/2F个护美妆/热门/右侧2.jpg"/></a>
+										<a href="#none" style=""><img src="img/京东全部图片/2F个护美妆/热门/右侧5.jpg"/></a>
+									</li>
+								</ul>	
+								<!--//main-body里面那个轮播图,通过绝对定位的方式导入图片-->	
+								<div class="slide">
+									<div class="slide-body">
+										<ul class="slide-main">
+											<li class="slide-img">
+												<a href="#none"><img src="img/京东全部图片/2F个护美妆/热门/导航1.jpg"/></a>
+												<a href="#none" style=""><img src="img/京东全部图片/2F个护美妆/热门/lunbo_bottom.jpg"/></a>
+											</li>
+											<li class="slide-img">
+												<a href="#none"><img src="img/京东全部图片/2F个护美妆/热门/导航2.jpg"/></a>
+												<a href="#none" style=""><img src="img/京东全部图片/2F个护美妆/热门/lunbo_bottom2.jpg"/></a>
+											</li>
+											<li class="slide-img">
+												<a href="#none"><img src="img/京东全部图片/2F个护美妆/热门/导航3.jpg"/></a>
+												<a href="#none" style=""><img src="img/京东全部图片/2F个护美妆/热门/lunbo_bottom.jpg"/></a>
+											</li>
+											<li class="slide-img">
+												<a href="#none"><img src="img/京东全部图片/2F个护美妆/热门/导航4.jpg"/></a>
+												<a href="#none" style=""><img src="img/京东全部图片/2F个护美妆/热门/lunbo_bottom2.jpg"/></a>
+											</li>
+										</ul>	
+										<div class="LunBoNum">
+											<span class="CurrentNum"></span>
+											<span></span>
+											<span></span>
+											<span></span>
+										</div>
+									</div>
+									<div class="list_btn list_btn_1">&lt;</div>
+									<div class="list_btn list_btn_2">&gt;</div>
+								</div>
+								<!--大牌里面最右侧的4张图片-->
+								<ul class="main-extra">
+									<li class="fore1">
+										<a href="#none"><img src="img/京东全部图片/2F个护美妆/热门/右侧3.jpg"/></a>
+									</li>
+									<li class="fore1">
+										<a href="#none"><img src="img/京东全部图片/2F个护美妆/热门/右侧6.jpg"/></a>
+									</li>
+								</ul>
+						</div>
+						<!--除了大牌以外的其他层数-->
+					</div><!--floor_content结束-->
+						<div class="main hide num1">
+							<ul class="p-list">
+							</ul>
+						</div>
+						<div class="main hide num2">
+							<ul class="p-list">
+							</ul>
+						</div>
+						<div class="main hide num3">
+							<ul class="p-list">
+							</ul>
+						</div>
+						<div class="main hide num4">
+							<ul class="p-list">
+							</ul>
+						</div>
+						<div class="main hide num5">
+							<ul class="p-list">
+							</ul>
+						</div>
+						<div class="main hide num6">
+							<ul class="p-list">
+							</ul>
+						</div>
+						<div class="main hide num7">
+							<ul class="p-list">
+							</ul>
+						</div>
+						<div class="main hide num8">
+							<ul class="p-list">
+							</ul>
+						</div>
+				</div><!--floor1_结束-->
+				
+			</div> <!--楼层1结束-->
+			<!--楼层之间的广告-->
+		</div>
+			<div class="floor_banner_more">
+				<ul>
+					<li class="fore1"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/2.jpg"/></a></li>
+					<li class="fore2"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/2.jpg"/></a></li>
+					<li class="fore3"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/2.jpg"/></a></li>
+					<li class="fore4"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/2.jpg"/></a></li>
+					<li class="fore5"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/2.jpg"/></a></li>
+					<li class="fore6"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/2.jpg"/></a></li>
+					<li class="fore7"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/2.jpg"/></a></li>
+					<li class="fore8"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/2.jpg"/></a></li>
+					<li class="fore9"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/2.jpg"/></a></li>
+					<li class="fore10"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/2.jpg"/></a></li>
+				</ul>
+				
+			</div>
+			<!--楼层3-->	
+			<div class="floor w" id="floor_3">
+				<div class="floor_3">
+					<div class="f3_title mt">
+						<h2>
+							<i>3F</i>手机通讯</h2>
+						<!--楼层右边的导航栏-->	
+						<ul class="tab">
+							<li class="tab-item tab-selected">
+								<a href="#none">热门</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">品质优选</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">新机尝鲜</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">高性价比</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">口碑推荐</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">合约机</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">手机卡</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">店铺精选</a>
+								<span>◆</span>
+							</li>
+							<li class="tab-item">
+								<a href="#none">手机配件</a>
+								<span>◆</span>
+							</li>
+						</ul>
+					</div>
+					<!--下面的内容-->
+					<div class="f3_content mc">
+						<div class="side">
+							<div class="sideInner">
+								<div class="banner">
+									<a href="#none">
+										<img src="img/京东全部图片/3F手机通讯/左侧固定/1.jpg"/>
+									</a>
+								</div>
+								<ul class="themes">
+									<li class="fore1"><a href="#none"><i class="icon"></i><span>男装</span></a></li>
+									<li class="fore1"><a href="#none"><i class="icon"></i><span>女装</span></a></li>
+									<li class="fore1"><a href="#none"><i class="icon"></i><span>品牌</span></a></li>
+								</ul>
+								<ul class="assists">
+									<li class="fore1"><a href="#none">MotoZ享24期免息</a><i>></i></li>
+									<li class="fore2"><a href="#none">乐Pro3 10:00开抢</a><i>></i></li>
+									<li class="fore1"><a href="#none">MotoZ享24期免息</a><i>></i></li>
+									<li class="fore2"><a href="#none">乐Pro3 10:00开抢</a><i>></i></li>
+								</ul>
+								<ul class="words">
+									<li class="fore1" >
+										<a href="#none" class="style-red">潮流女装</a>
+										<a href="#none">潮流女装</a>
+										<a href="#none">丝巾</a>
+										<a href="#none">潮流女装</a>
+										<a href="#none">潮流女装</a>
+										<a href="#none" class="style-red">潮流女装</a>
+										<a href="#none">潮流女装</a>
+										<a href="#none">潮流女装</a>
+									</li>
+									<li  class="fore2">
+										<a href="#none">潮流女装</a>
+										<a href="#none" class="style-red">潮流女装</a>
+										<a href="#none">淘宝</a>
+										<a href="#none">潮流女装</a>
+										<a href="#none">潮流女装</a>
+										<a href="#none" class="style-red">潮流女装</a>
+										<a href="#none">潮流女装</a>
+										<a href="#none">潮流女装</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--中间那一大块地方-->
+						<!--大牌-->
+						<div class="main hide main-select num0">
+							<div class="main-inner">
+								<!--大牌里面中间的部分-->
+								<ul class="main-body">
+									<li class="side_lunbo">
+										<a href="#none"><img src="img/京东全部图片/3F手机通讯/热门/导航1.jpg"/></a>
+									</li>
+									<li class="fore1">
+										<a href="#none"><img src="img/京东全部图片/3F手机通讯/热门/1.jpg"/></a>
+									</li>
+									<li class="fore2">
+										<a href="#none"><img src="img/京东全部图片/3F手机通讯/热门/2.jpg"/></a>
+									</li>
+									<li class="fore3">
+										<a href="#none"><img src="img/京东全部图片/3F手机通讯/热门/6.jpg"/></a>
+									</li>
+									<li class="fore4">
+										<a href="#none"><img src="img/京东全部图片/3F手机通讯/热门/7.jpg"/></a>
+									</li>
+									<li class="fore5">
+										<a href="#none"><img src="img/京东全部图片/3F手机通讯/热门/8.jpg"/></a>
+									</li>
+								</ul>
+								<!--//main-body里面那个轮播图,通过绝对定位的方式导入图片-->	
+								<div class="slide">
+									<div class="slide-body">
+										<ul class="slide-main">
+											<li class="slide-img"><a href="#none"><img src="img/京东全部图片/3F手机通讯/热门/导航1.jpg"/></a></li>
+											<li class="slide-img"><a href="#none"><img src="img/京东全部图片/3F手机通讯/热门/导航2.jpg"/></a></li>
+											<li class="slide-img"><a href="#none"><img src="img/京东全部图片/3F手机通讯/热门/导航3.jpg"/></a></li>
+											<li class="slide-img"><a href="#none"><img src="img/京东全部图片/3F手机通讯/热门/导航4.jpg"/></a></li>
+										</ul>	
+										<div class="LunBoNum">
+											<span class="CurrentNum">1</span>
+											<span>2</span>
+											<span>3</span>
+											<span>4</span>
+										</div>
+									</div>
+									<div class="list_btn list_btn_1">&lt;</div>
+									<div class="list_btn list_btn_2">&gt;</div>
+								</div>
+								
+								<!--大牌里面最右侧的4张图片-->
+								<ul class="main-extra hide">
+									<li class="fore1">
+										<a href="#none"><img src="img/京东全部图片/3F手机通讯/热门/3.jpg"/></a>
+									</li>
+									<li class="fore2">
+										<a href="#none"><img src="img/京东全部图片/3F手机通讯/热门/4.jpg"/></a>
+									</li>
+									<li class="fore3">
+										<a href="#none"><img src="img/京东全部图片/3F手机通讯/热门/5.jpg"/></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--除了大牌以外的其他层数-->
+						<div class="main hide num1">
+							<ul class="p-list">
+							</ul>
+							<ul class="img-list">
+							</ul>
+						</div>
+						<div class="main hide num2">
+							<ul class="p-list">
+							</ul>
+							<ul class="img-list">
+							</ul>
+						</div>
+						<div class="main hide num3">
+							<ul class="p-list">
+							</ul>
+							<ul class="img-list">
+							</ul>
+						</div>
+						<div class="main hide num4">
+							<ul class="p-list">
+							</ul>
+							<ul class="img-list">
+							</ul>
+						</div>
+						<div class="main hide num5">
+							<ul class="p-list">
+							</ul>
+							<ul class="img-list">
+							</ul>
+						</div>
+						<div class="main hide num6">
+							<ul class="p-list">
+							</ul>
+							<ul class="img-list">
+							</ul>
+						</div>
+						<div class="main hide num7">
+							<ul class="p-list">
+							</ul>
+							<ul class="img-list">
+							</ul>
+						</div>
+						<div class="main hide num8">
+							<ul class="p-list">
+							</ul>
+							<ul class="img-list">
+							</ul>
+						</div>
+					</div><!--floor_content结束-->
+				</div><!--floor3_结束-->
+				
+			</div> <!--楼层3结束-->
+			<!--中间的广告-->
+			<div class="floor_banner_more">
+				<ul>
+					<li class="fore1"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/4.jpg"/></a></li>
+					<li class="fore2"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/4.jpg"/></a></li>
+					<li class="fore3"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/4.jpg"/></a></li>
+					<li class="fore4"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/4.jpg"/></a></li>
+					<li class="fore5"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/4.jpg"/></a></li>
+					<li class="fore6"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/4.jpg"/></a></li>
+					<li class="fore7"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/4.jpg"/></a></li>
+					<li class="fore8"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/4.jpg"/></a></li>
+					<li class="fore9"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/4.jpg"/></a></li>
+					<li class="fore10"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/4.jpg"/></a></li>
+				</ul>
+				
+			</div>
+			<!--楼层四-->
+			<div id="floor_4" class="w floor" style="width: 1100px;">
+				<img src="img/京东全部图片/4F家用电器/floor_4.png" alt="" />
+			</div>
+			<div class="floor_banner_more">
+				<ul>
+					<li class="fore1"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore2"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore3"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore4"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore5"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore6"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore7"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore8"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore9"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore10"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+				</ul>
+				
+			</div>
+			<!--楼层五-->
+			<div id="floor_5" class="w floor" style="width: 1100px;">
+				<img src="img/京东全部图片/5F电脑数码/floor_5.png" alt="" />
+				
+			</div>
+			<div class="floor_banner_more">
+				<ul>
+					<li class="fore1"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore2"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore3"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore4"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore5"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore6"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore7"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore8"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore9"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore10"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+				</ul>
+				
+			</div>
+			<!--楼层六-->
+			<div id="floor_6" class="w floor" style="width: 1100px;">
+				<img src="img/京东全部图片/6F运动健身/floor_6.png" alt="" />
+			</div>
+			<div class="floor_banner_more">
+				<ul>
+					<li class="fore1"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore2"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore3"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore4"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore5"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore6"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore7"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore8"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore9"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore10"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+				</ul>
+				
+			</div>
+			<!--楼层7-->
+			<div id="floor_7" class="w floor" style="width: 1100px;">
+				<img src="img/京东全部图片/4F家用电器/floor_4.png" alt="" />
+			</div>
+			<div class="floor_banner_more">
+				<ul>
+					<li class="fore1"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore2"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore3"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore4"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore5"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore6"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore7"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore8"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore9"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore10"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+				</ul>
+				
+			</div>
+			<!--楼层8-->
+			<div id="floor_8" class="w floor" style="width: 1100px;">
+				<img src="img/京东全部图片/5F电脑数码/floor_5.png" alt="" />
+				
+			</div>
+			<div class="floor_banner_more">
+				<ul>
+					<li class="fore1"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore2"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore3"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore4"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore5"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore6"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore7"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore8"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore9"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore10"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+				</ul>
+				
+			</div>
+			<!--楼层9-->
+			<div id="floor_9" class="w floor" style="width: 1100px;">
+				<img src="img/京东全部图片/6F运动健身/floor_6.png" alt="" />
+			</div>
+			<!--中间的广告-->
+			<div class="floor_banner_more">
+				<ul>
+					<li class="fore1"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore2"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore3"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore4"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore5"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore6"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore7"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore8"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore9"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore10"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+				</ul>
+				
+			</div>
+			<!--楼层10-->
+			<div id="floor_10" class="w floor" style="width: 1100px;">
+				<img src="img/京东全部图片/4F家用电器/floor_4.png" alt="" />
+			</div>
+			<div class="floor_banner_more">
+				<ul>
+					<li class="fore1"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore2"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore3"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore4"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore5"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore6"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore7"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore8"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore9"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+					<li class="fore10"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/5.jpg"/></a></li>
+				</ul>
+				
+			</div>
+			<!--楼层11-->
+			<div id="floor_11" class="w floor" style="width: 1100px;">
+				<img src="img/京东全部图片/5F电脑数码/floor_5.png" alt="" />
+				
+			</div>
+			<div class="floor_banner_more">
+				<ul>
+					<li class="fore1"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore2"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore3"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore4"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore5"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore6"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore7"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore8"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore9"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+					<li class="fore10"><a href="#"><img src="img/京东全部图片/1F服饰/1F-line/6.jpg"/></a></li>
+				</ul>
+				
+			</div>
+			<!--楼层12-->
+			<div id="floor_12" class="w floor" style="width: 1100px;">
+				<img src="img/京东全部图片/6F运动健身/floor_6.png" alt="" />
+			</div>
+				
+			<!--底部部分-->
+			<div id="foot">
+				<!--用来放底部的内容-->
+			</div>
+			
+			<!--开始写左边出现的楼层列表-->
+			<div id="tooBar_left_LoutiNav">
+			<ul>
+				<li class="hover">1F <span>服饰</span></li>
+				<li>2F <span>美妆</span> </li>
+				<li>3F <span>手机</span> </li>
+				<li>4F <span>家电</span> </li>
+				<li>5F <span>数码</span> </li>
+				<li>6F <span>运动</span> </li>
+				<li>7F <span>居家</span> </li>
+				<li>8F <span>母婴</span> </li>
+				<li>9F <span>食品</span> </li>
+				<li>10F <span>图书</span> </li>
+				<li>11F <span>服务</span> </li>
+				<li>12F <span>用品</span> </li>
+				<li class="last">Top</li>
+			</ul>
+			</div>
+			<!--右边的楼梯条-->
+			<div id="tooBar_right_LoutiNav">
+				<div class="tooBar_right_LoutiNav_fore1 fore">
+					<i class="tab-tip"></i>
+					<i class="tab-ico"></i>
+					<em class="tab-text">京东会员</em>
+				</div>
+				<div class="tooBar_right_LoutiNav_fore2 fore">
+					<i class="tab-ico"></i>
+					<em class="tab-text">购物车</em>
+				</div>
+				<div class="tooBar_right_LoutiNav_fore3 fore">
+					<i class="tab-ico"></i>
+					<em class="tab-text">我的关注</em>
+				</div>
+				<div class="tooBar_right_LoutiNav_fore4 fore">
+					<i class="tab-ico"></i>
+					<em class="tab-text">我的足迹</em>
+				</div>
+				<div class="tooBar_right_LoutiNav_fore5 fore">
+					<i class="tab-ico"></i>
+					<em class="tab-text">顶部</em>
+				</div>
+				<div class="tooBar_right_LoutiNav_fore6 fore">
+					<i class="tab-ico"></i>
+					<em class="tab-text">反馈</em>
+				</div>
+			</div>
+			
+
+	</body>
+		<!--猜你喜欢-->
+		<script type="text/javascript" src="javaScript/main_nav/guessyoulike.js" ></script>
+		<!--左边楼梯的JS-->
+		<script type="text/javascript" src="javaScript/main_nav/tooBar_left_LoutiNav.js" ></script>
+		<!--轮播图的script,封装起来的,可以直接用-->
+		<script type="text/javascript" src="javaScript/main_nav/center_lunbo.js" ></script>
+		<!--under_lunbo底下的轮播图-->
+		<script type="text/javascript" src="javaScript/main_nav/under_lunbo.js" ></script>
+		<!--第一层的js-->
+		<script type="text/javascript" src="javaScript/main_nav/floor1.js" ></script>
+		<!--第二层的js-->
+		<script type="text/javascript" src="javaScript/main_nav/floor2.js" ></script>
+		<!--第三层的js-->
+		<script type="text/javascript" src="javaScript/main_nav/floor3.js" ></script>
+		<!--楼层1的轮播图-->
+		<script type="text/javascript" src="javaScript/main_nav/floor1_lunbo.js" ></script>
+		<!--楼层2的轮播图-->
+		<script type="text/javascript" src="javaScript/main_nav/floor2_lunbo.js" ></script>
+		<!--楼层3的轮播图-->
+		<script type="text/javascript" src="javaScript/main_nav/floor3_lunbo.js" ></script>
+		<!--//遍历主页左边的li出现右边的内容
+		<!--//右边的内容用json来代替-->
+		<script type="text/javascript" src="javaScript/main_nav/dd_content_list.js" ></script>
+		<!--将google的cookie导入-->
+		<script type="text/javascript" src="javaScript/jquery.cookie.js" ></script>
+		<!--在购物车页面读取cookie-->
+		<!--在主页面写入cookie-->
+		<script type="text/javascript" src="javaScript/main_nav/indexCookie.js" ></script>
+</html>

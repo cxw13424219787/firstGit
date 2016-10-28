@@ -1,0 +1,492 @@
+			/*初始化,一开始排除默认样式的干扰*/
+			i, ul, ol, p, a, em,span, b, strong, h1, h2, h3, h4, h5, h6 {
+				font-style: normal;
+				font-variant: normal;
+				font-weight: 100;
+				text-decoration: none;
+				font-family: "微软雅黑";
+				list-style: none;
+				font-size: 12px;
+			}
+			.hide{
+				display: none;
+			}
+			.w{
+				margin: 0 auto;
+				width: 1210px;
+			}
+			.fl {
+				float: left;
+			}
+			
+			.fr {
+				float: right;
+			}
+			
+			html, body, div, ul, li, ol, img, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset {
+				margin: 0;
+				padding: 0;
+			}
+			
+			fieldset, img {
+				border: none;
+			}
+			/*自适应宽高*/
+			
+			html, body {
+				width: 100%;
+				height: 100%;
+			}
+			a{
+				color: black;
+			}
+			a:hover{
+				color: #cc3333;
+				cursor: pointer;
+			}
+			/* container大容器 */
+			.container {
+				margin: 0 30px;
+				height: 9999px;
+				border: 1px solid red;
+				font-family: 微软雅黑;
+			}
+			
+			/*在头部的导航栏让这条线当做白边遮住下面的黑线*/
+			.shortcut {
+			    position: absolute;
+			    top: -7px;
+			    height: 10px;
+			    background: #fff;
+			    overflow: hidden;
+			}
+			/* 头部header */
+			.header {
+				background: #f1f1f1;
+				height: 32px;
+				position: relative;
+				padding: 0 25px;
+			}
+			.header div.address{
+				float: left;
+				line-height:30px ;
+				position: relative;
+				display: block;
+				width: 100px;
+			}
+			/*送至*/
+			.header div.address span{
+				padding-left: 10px;
+				padding-right: 8px;
+				font-size: 12px;
+			}
+			/*北京*/
+			.header div.address i{
+				padding-right: 8px;
+			}
+			/*小图标*/
+			.header_list li em{
+				top: 14px;
+				height: 7px;
+				overflow: hidden;
+				font: 400 15px/15px consolas;
+				color: #6A6A6A;	
+				position: absolute;		
+			}
+			.header em{
+				top: 12px;
+				right: 8px;
+				height: 7px;
+				overflow: hidden;
+				font: 400 15px/15px consolas;
+				color: #6A6A6A;	
+				position: absolute;		
+				
+			}
+			/*注意:通过改变top的值,实现滑动到改样式时,em s的top改变*/
+			.header em s{
+				position: relative;
+				top: -5px;
+				text-decoration: none;
+			}
+			.header div.address:hover em s,.header_list li:hover em s{
+				top: 1px;
+			}
+			
+			/*点击地址的时候出现下拉框*/
+			.header_address_list{
+				position: absolute;
+				width: 280px;
+				height: 250px;
+				background:white;
+				border: 1px solid #CCCCCC;
+				top: 32px;
+				left: 0;
+				padding: 10px 0px 10px 10px;
+				display: none;
+				z-index: 100;
+			}
+			.header_address_list li{
+				width: 68px;
+				height: 20px;
+				float: left;
+				line-height: 20px;
+				margin-top: 5px;
+			}
+			.header_address_list li a{
+				display: block;
+				line-height: 20px;
+				color: black;
+				width: 38px;
+				text-align: center;
+				height: 20px;
+				display: block;
+				
+			}
+			/*滑动a标签的时候变色*/
+			.header_address_list li a:hover{
+				color: #cc0033;
+				background: #ccc;
+			}
+			.active{
+				background: #cc0033;
+				color: #FFFFFF !important;
+			}
+			/*头部右边的标签*/
+			.header .header_list li a:hover{
+				background: white;
+				
+			}
+			.header_list li{
+				float:left;
+			    padding-left: 10px;
+			    padding-right: 30px;
+				position: relative;
+				height: 32px;
+				line-height: 32px;
+			    
+			}
+			.header_list li  .line {
+			    position: absolute;
+			    width: 1px;
+			    background: #ccc;
+			    overflow: hidden;
+			    height: 14px;
+			    top: 10px;
+			    right: 0;
+			}
+	
+			.header_list li:nth-child(1),.header_list li:nth-child(2),.header_list li:nth-child(4),.header_list li:nth-child(5){
+			    padding-right: 10px;
+			}
+			.header_list li:last-child{
+				border-right: none;
+			}
+			.header_list{
+			    top: 0px;
+			    position: relative;
+			    float: left;
+			    margin-left: 309px;
+			}
+			/*li标签里面我的京东的子菜单*/
+			.header_list li .myJingdong{
+				position: absolute;
+				width: 300px;
+				height: 270px;
+				background: white;
+				top: 32px;
+			    left: 0px;
+			    display: none;
+			    z-index: 100;
+			}
+			/*登入的图片*/
+			.header_list li .myJingdong img{
+				float: left;
+				border-radius: 50%;
+				padding: 13px 17px 20px 13px;
+			}
+			/*请登入那段文字*/
+			.header_list li .myJingdong i.myJingdong_login{
+				float: left;
+				margin-top: 38px;
+				line-height: 24px;
+			}
+			.header_list li .myJingdong i.myJingdong_login a{
+				font-weight: 700;
+			}
+			/*优惠券和消息*/
+			.header_list li .myJingdong p.myJingdong_news{
+				margin-top: 64px;
+				line-height: 24px;
+			}
+			/*下面那段ul*/
+			.header_list li .myJingdong ul.myJingdong_list{
+				width: 300px;
+				height: 110px;
+				float: left;
+				margin-left: 13px;
+			}
+			.header_list li .myJingdong ul.myJingdong_list li{
+				width: 60px;
+				margin-right: 67px;
+
+			}
+			.header_list li .myJingdong ul.myJingdong_list li{
+				float: left;
+				line-height: 24px;
+				padding: 0;
+				width: 60px;
+				height: 32px;
+			}
+			/*手机京东划入时出现的子菜单*/
+			.header_list li .myJingdong ul.myJingdong_list li.phone{
+				width: 90px;
+			}
+
+			.header_list li.phone i{
+				position: absolute;
+				background: url(../img/京东全部图片/头部/header/jd2015img.png) no-repeat 0px 0px;
+				width: 14px;
+			    height: 20px;
+			    top: 5px;
+			    left: 6px;				
+			}
+			.header_list li.phone:hover i{
+				background: url(../img/京东全部图片/头部/header/jd2015img.png) no-repeat 0px -25px;
+			}
+			.header_list li .phoneJingdong{
+				position: absolute;
+				top: 32px;
+				left: 0;
+				display: none;
+			    z-index: 100;
+			}
+			.header_list li .phoneJingdong a{
+				position: absolute;
+				display: block;
+			}
+				/*京东客户端*/
+			.header_list li .phoneJingdong .jingdong_customer{
+				top: 9px;
+				left: 98px;
+				background: white;
+			}
+				/*京东钱包客户端*/
+			.header_list li .phoneJingdong .jingdong_money_customer{
+			    top: 106px;
+			    left: 98px;
+			    background: white;
+			}
+				/*新人专享188元大礼包*/
+			.header_list li .phoneJingdong .new_person{
+				top: 26px;
+				left: 98px;
+				color: #cc0033;
+			}
+				/*扫一扫封顶立减999元*/
+			.header_list li .phoneJingdong .saoyisao{
+				top: 124px;
+				left: 98px;
+				color: #cc0033;
+			}
+ 
+			/*关注京东划入时出现的子菜单*/
+			.header_list li .focusJingdong{
+				position: absolute;
+				top: 32px;
+				left: 0;
+				display: none;
+			    z-index: 100;
+			}
+			.header_list li .focusJingdong img{
+				width: 88px;
+				border: 1px solid #ddd;	
+			}
+			/*客户服务时划入时出现的子菜单*/
+			/*最外层的div*/
+			.header_list li .customer_service{
+				position: absolute;
+				top: 32px;
+				left: 0;
+				width: 163px;
+				height: 215px;
+				background: white;
+				border: 1px solid #ccc;
+				padding: 8px 0 10px 11px;
+				display: none;
+			    z-index: 100;
+			}
+			.header_list li .customer_service ul h3{
+				font-weight: 800;
+				margin-bottom: 5px;
+			}
+			.header_list li .customer_service ul li{
+				padding: 0;
+				width: 70px;
+				line-height: 24px;
+			}
+			/*网站导航划入时出现的子菜单*/
+			.header_list li .webNav{
+				position: absolute;
+				top: 32px;
+				right: 0px;
+				width: 1201px;
+				background: #fff;
+				border: 1px solid #ddd;	
+				padding: 20px 0;	
+				display: none;	
+			    z-index: 100;
+			}
+			/*第一个部分*/
+			.header_list li .webNav dl{
+				float: left;
+				border-left: 1px solid #ddd;
+				padding-left: 20px;
+			}
+			.header_list li .webNav .webNav_first dl{
+				width: 340px;
+				border-left: none;
+			}
+			.header_list li .webNav  dl dd div{
+				width: 83px;
+				float: left;
+				line-height: 24px;
+			}
+			.header_list li .webNav  dl dt{
+				margin-bottom: 6px;
+				font-size: 14px;
+				font-weight: 700;
+			}
+			/*第二个部分*/
+			.webNav_secend dl,.webNav_third dl,.webNav_forth dl{
+				width: 250px;
+				float: left;
+			}
+			/*第二大块nav*/
+			.nav{
+				background: white;
+				padding: 20px 25px;
+				height: 60px;
+				/*float: left;*/
+				overflow: hidden;
+			}
+			.nav .nav_logo{
+				float: left;
+				width: 362px;
+			}
+			.nav .nav_form{
+				height: 36px;
+				float: left;
+			}
+			.nav .nav_form .text{
+				float: left;
+				width: 370px;
+				height: 24px;
+				line-height: 24px;
+				color: #666;
+				padding: 4px;
+				margin-bottom: 4px;
+				border-width: 2px 0 2px 2px;
+				border-color: #B61D1D;
+				border-style: solid;
+				outline: 0;
+				font-size: 14px;
+			}
+			.nav .nav_form .button{
+				float: left;
+				width: 82px;
+				height: 36px;
+				background: #B61D1D;
+				border: none;
+				line-height: 1;
+				color: #fff;
+				font-family: "Microsoft YaHei";
+				font-size: 16px;
+				cursor: pointer;				
+			}
+			.nav .nav_form_footer{
+				float: left;
+				width: 462px;
+				height: 20px;
+				line-height: 20px;
+				/*overflow: hidden;*/
+			}
+			.nav .nav_form_footer a{
+				margin-right: 10px;
+			}
+			/*购物车*/
+			.nav_shoppingCar{
+				float: right;
+				height: 36px;
+				
+				/*margin-top: 25px;*/
+			}
+			/*购物车的图标*/
+			.nav_shoppingCar_icon{
+				width: 75px;
+				height: 34px;
+				border: 1px solid #DFDFDF;
+				padding: 0 28px 0 36px;
+				background: #F9F9F9;
+				text-align: center;
+				line-height: 34px;
+				position: relative;
+				margin-right: 65px;
+				margin-top: -37px;
+			}
+			.nav_shoppingCar_icon .icon_left{
+				position: absolute;
+				background: url(../img/京东全部图片/头部/header/jd2015img.png) no-repeat 0px -58px;
+				width: 18px;
+				height: 16px;
+				top: 9px;
+				left: 18px;
+			}
+			.nav_shoppingCar_icon .icon_right{
+				position: absolute;
+				top: 11px;
+				right: 10px;
+				width: 7px;
+				height: 13px;
+				/*overflow: hidden;*/
+				font: 400 13px/13px simsun;
+				color: #999;
+			}
+			.nav_shoppingCar_icon .icon_count{
+				position: absolute;
+				top: -4px;
+				left: 104px;
+				display: inline-block;
+				padding: 1px 2px;
+				font-size: 12px;
+				line-height: 12px;
+				color: #fff;
+				background-color: #c81623;
+				border-radius: 7px 7px 7px 0;
+				text-align: center;
+			}
+			.shoppingCar_dorpdown_layer{
+				position: absolute;
+				border: 1px solid #ddd;
+				right: 96px;
+				display: none;
+				z-index: 100;
+			}
+			.shoppingCar_dorpdown_layer .prompt{
+				padding: 10px 15px;
+				background: white;
+			}
+			.shoppingCar_dorpdown_layer .prompt .nogoods{
+				padding-left: 30px;
+				height: 49px;
+				line-height: 49px;
+				overflow: hidden;
+				color: #999;
+			}
+			.shoppingCar_dorpdown_layer .nogoods b{
+				float: left;
+				width: 56px;
+				height: 49px;				
+				background: url(../img/京东全部图片/头部/header/shopping-nogoods.png) no-repeat;
+			}
+

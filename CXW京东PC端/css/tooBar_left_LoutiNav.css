@@ -1,0 +1,43 @@
+			#tooBar_left_LoutiNav {
+				position: fixed;
+				left: 0px;
+				top: 18%;
+				border: 1px solid #ccc;
+				/*display: none;*/
+				z-index: 500;
+			}
+			#tooBar_left_LoutiNav ul li {
+				list-style: none;
+				width: 24px;
+				height: 30px;
+				border-bottom: 1px solid #ddd;
+				text-align: center;
+				position: relative;
+				line-height: 30px;
+			}
+			#tooBar_left_LoutiNav ul li span {
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				width: 24px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				display: none;
+			}
+			#tooBar_left_LoutiNav ul li span {
+				background: #C00;
+				color: #fff;
+				border-bottom: 1px solid #ddd;
+			}
+			#tooBar_left_LoutiNav ul li.last {
+				background: #C00;
+				color: #fff;
+			}
+			/*这个表示的是li下的一个class=hover的子元素*/
+			/*这个表示的是li为class=hover的元素*/
+			#tooBar_left_LoutiNav ul li.hover span{
+				background: #c00;
+				color: #fff;
+				display: block;
+			}
