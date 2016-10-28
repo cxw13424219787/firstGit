@@ -1,0 +1,14 @@
+/*
+ * fn函数 file
+ */
+.fn-text-overflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.iconfont {
+  font-family: 'iconfont';
+  display: inline-block;
+  vertical-align: middle;
+  font-style: normal;
+}
