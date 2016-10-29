@@ -65,13 +65,11 @@ $(function(){
 	
 	function ajax () {
 		$.ajax({
-//				url:'json/product'+index+'.json',
-				url:'json/product'+index+'.txt',
-//				dataType:'json',
-				success:function(response){
-//					console.log(res);
-					var res = JSON.parse(response);
-					console.log(res);
+//				url:'json/product'+index+'.txt',
+				url:'json/product'+index+'.json',
+				dataType:'json',
+				success:function(res){
+					console.log(res)
 					if(index >= 4){
 						return;
 					}
